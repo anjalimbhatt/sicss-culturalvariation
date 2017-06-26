@@ -26,9 +26,44 @@ library(rtweet)
 #
 # ## IMPORTANT: RESTART R/RSTUDIO
 
+
+
+# Load twitter token
 twitter_token <- get_tokens()
 
+# Set geographic bounds
+# Need SW and NE corners of bounding box
+# CSV format from http://boundingbox.klokantech.com/
+# Then revised as Twitter's bounding box for Arkansas
+ark_coords <- c(-94.61771,33.004106,-89.644838,36.499767)
 
-stream_tweets(q = "", timeout = 30, parse = TRUE, token = NULL,
-              file_name = NULL, gzip = FALSE, verbose = TRUE, fix.encoding = TRUE,
-              ...)
+# Stream tweets into file
+filename <- "arkansastweets"
+arkansas_tweets <- stream_tweets(q = ark_coords, timeout = 10, file_name = filename)
+
+n.tweets <- 500
+for (i in seq_len(n.tweets)) {
+  stream_tweets(q = ark_coords, timeout = 60,
+                file_name = paste0(filename, i), parse = FALSE)
+  if (i == n.tweets) {
+    message("all done!")
+    break
+  } else {
+    # wait between 0 and 150 secs before next stream
+    Sys.sleep(runif(1, 0, 150))
+  }
+}
+
+# parse the samples
+tw <- lapply(c("rtw1.json", "rtw2.json", "rtw3.json"),
+             parse_stream)
+
+# collapse lists into single data frame
+tw.users <- do.call("rbind", users_data(tw))
+tw <- do.call("rbind", tw)
+attr(tw, "users") <- tw.users
+
+### Read coordinates of interstate highway exits
+### Pulled from http://overpass-turbo.eu/
+
+
