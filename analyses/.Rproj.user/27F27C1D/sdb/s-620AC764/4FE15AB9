@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "library(rtweet)\nlibrary(tidyverse)\n\nhttps://mkearney.github.io/rtweet/articles/stream.html\n\nappname <- \"culturalvar\"\nkey <- \"5JyPHxeXEOoheoyW7c2lJ1zxT\"\nsecret <-\"549Tfshtx200b3SGSx5Pb2yEmUV1nk5tBvuXG8WcZswACfbRZU\"\n\ntwitter_token <- create_token(\n  app = appname,\n  consumer_key = key,\n  consumer_secret = secret)\n\nq <- paste0(\"hillaryclinton,imwithher,realdonaldtrump,maga,electionday\")\nfilename <- \"rtelect.json\"\nrt <- stream_tweets(q = q, timeout = 60, file_name = filename)\n\n\ntest = rt %>%\n  mutate_all(funs(as.factor))\n",
+    "created" : 1498498572657.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3170570783",
+    "id" : "4FE15AB9",
+    "lastKnownWriteTime" : 1498502127,
+    "last_content_update" : 1498502127990,
+    "path" : "~/Documents/research/Projects/twitdist/test_tweet.R",
+    "project_path" : "test_tweet.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
