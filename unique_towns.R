@@ -5,4 +5,7 @@ setwd("~/Git/merging_data")
 zipcodes <- read.csv("zip_codes_states.csv", header=T)
 
 # Then decided to use wikipedia-listed cities
+# https://en.wikipedia.org/wiki/List_of_cities_in_Iowa
+# https://en.wikipedia.org/wiki/List_of_cities_and_towns_in_Arkansas
+
 iowa_cities <- read.csv("iowa_cities_wiki.csv", header=F)
