@@ -1,9 +1,8 @@
-setwd("~/Git/sicss-culturalvariation")
-zipcodes <- read.csv("zip_codes_states.csv", header=T)
-iowa_zips <- zipcodes[zipcodes$state=="IA",]
-iowa_towns <- as.matrix(unique(iowa_zips$city))
-write.csv(iowa_towns, "iowa_towns.csv", row.names=F)
-arkansas_zips <- zipcodes[zipcodes$state=="AR",]
-arkansas_towns <- as.matrix(unique(arkansas_zips$city))
-write.csv(arkansas_towns, "arkansas_towns.csv", row.names=F)
+setwd("~/Git/merging_data")
 
+# Initially thought about dataset obtained from somewhat sketchy site
+# https://www.gaslampmedia.com/download-zip-code-latitude-longitude-city-state-county-csv/
+zipcodes <- read.csv("zip_codes_states.csv", header=T)
+
+# Then decided to use wikipedia-listed cities
+iowa_cities <- read.csv("iowa_cities_wiki.csv", header=F)
