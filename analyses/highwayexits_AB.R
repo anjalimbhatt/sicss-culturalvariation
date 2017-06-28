@@ -4,9 +4,11 @@
 
 library(stringr)
 
+### DO FOR BOTH IOWA AND ARKANSAS
+
 # Import highway exit data
 setwd("~/Git/merging_data/analyses")
-raw <- readLines("arkansas_highwayexits.txt")
+raw <- readLines("iowa_highwayexits.txt")
 
 # Create table of lat/lon coordinates of highway exits
 lines <- grep('lat|lon',raw,value=TRUE)
@@ -17,4 +19,4 @@ names(exits) = c('latitude','longitude')
 
 # Write out as csv
 setwd("~/Git/merging_data/highways")
-write.csv(iowa_exits,"arkansasexits_coordinates.csv", row.names=F)
+write.csv(exits,"iowaexits_coordinates.csv", row.names=F)
