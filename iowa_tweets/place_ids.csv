@@ -1,0 +1,10 @@
+location,latitude,longitude,place.id,name,types
+des moines,41.6005448,-93.6091064,ChIJ5x5hwaSZ7ocRsuSRJlEoAHE,Des Moines,locality political
+des moines,41.6005448,-93.6091064,ChIJxebliryZ7ocRH4vUauhNaz0,Sovereign Grace Church,church place_of_worship point_of_interest establishment
+des moines,41.6005448,-93.6091064,ChIJIyvjYbyZ7ocRtRe0qJqmJtI,Village inn,point_of_interest establishment
+des moines,41.6005448,-93.6091064,ChIJIyvjYbyZ7ocROJfg7sYWXJQ,Llyod's Counseling,health point_of_interest establishment
+des moines,41.6005448,-93.6091064,ChIJIyvjYbyZ7ocREFR9PELiQoM,Iowa State Fair Grounds Jacobson Center,point_of_interest establishment
+des moines,41.6005448,-93.6091064,ChIJIyvjYbyZ7ocRSS28gfFE004,ATM Express,atm finance point_of_interest establishment
+des moines,41.6005448,-93.6091064,ChIJIyvjYbyZ7ocRwioic59uaSE,ATM Express,atm finance point_of_interest establishment
+des moines,41.6005448,-93.6091064,ChIJIyvjYbyZ7ocRfY8modiE2RA,Panchitos Mexican Food,restaurant food point_of_interest establishment
+des moines,41.6005448,-93.6091064,ChIJ0dplObyZ7ocRSoLd28pNtxA,Capitol Park,neighborhood political
