@@ -5,6 +5,7 @@
 library(stringr)
 library(geosphere)
 library(matrixStats)
+library(ggmap)
 
 ### DO FOR BOTH IOWA AND ARKANSAS
 
@@ -44,14 +45,38 @@ iowa_exits <- iowa_exits[,c(2,1)]
 ark_exits <- read.csv("arkansasexits_coordinates.csv", header=T)
 ark_exits <- ark_exits[,c(2,1)]
 
-places <- read.csv("") ### INPUT
+setwd("~/Git/merging_data/google_reviews/data/locations/")
+all_locations <- read.csv("all_locations.csv")
+places <- all_locations[,c(2,1)] # reordering to lon,lat format
+row.names(places) <- all_locations$location
 
 # Calculate the minimum distance (as the crow flies) between places and exits
 dist_matrix <- round(distm(places,iowa_exits, fun=distHaversine)/1000, digits=2)
 diag(dist_matrix) <- NA # remove diagonals
-places$mindist <- rowMins(dist_matrix, na.rm=T) # store the minimum distance by row
+all_locations$mindist <- rowMins(dist_matrix, na.rm=T) # store the minimum distance by row
+summary(all_locations$mindist) # check to see if reasonable
 
 # Calculate the minimum distance (as the car drives) between places and exits
 diag(driv_matrix) <- NA # remove diagonals
-places$mindrive <- rowMins(drive_matrix, na.rm=T)
+all_locations$mindrive <- rowMins(drive_matrix, na.rm=T)
+
+### Plot cities & exits
+
+# Iowa bounding box
+iowa_bounding_box = c(-96.6397171020508, 40.3755989074707, # southwest coordinates
+                      -90.1400604248047, 43.5011367797852) # northeast coordinates
+
+# Change to include exits outside of state
+bounds <- c(min(iowa_exits$longitude-.05), min(iowa_exits$latitude-.05),
+            max(iowa_exits$longitude)+.05, max(iowa_exits$latitude+.05))
+
+# Create map
+setwd("~/Git/merging_data/Presentation")
+map <- get_map(bounds, zoom = 7, maptype = "roadmap", source="google")
+png(filename="Iowa.png", units="in", width=6, height=6, pointsize=16, res=256)
+  ggmap(map) +
+    geom_point(aes(x = longitude, y = latitude), data = iowa_exits, alpha = .5, color = "red") +
+    geom_point(aes(x=lon, y=lat), data=all_locations, alpha=.5, color="blue")
+    theme_bw()
+dev.off()
 
