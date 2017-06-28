@@ -13,7 +13,7 @@ iowa_bounding_box = c(-96.6397171020508, 40.3755989074707, # southwest coordinat
 
 ## stream 3 random samples of tweets
 n.tweets <- 1000
-for (i in  500:1500) {
+for (i in  1500:3000) {
   stream_tweets(q = iowa_bounding_box, timeout = 60,
                 file_name = paste0("iowa_tweets/rtw_iowa", i), parse = FALSE)
   if (i == n.tweets) {

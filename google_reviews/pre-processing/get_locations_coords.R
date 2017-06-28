@@ -25,7 +25,7 @@ lapply(iowa_cities$names, function(city.name) {
   
   print(city.name)
   
-  location.info = google_geocode(address = paste(x, "Iowa"), 
+  location.info = google_geocode(address = paste(city.name, "Iowa"), 
                                  simplify = TRUE,   
                                  key = APIKEY)
   
