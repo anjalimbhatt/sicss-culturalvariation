@@ -14,28 +14,29 @@ MAX_PAGES <- 200 # number of pages of results to open (20/page)
 APIKEY <-  "AIzaSyB3YM0L-nAnDRwvsFrQJBeRulQFPi5AT0A"
 
 get_our_stores <- function(place_id, apikey, pause_length){
-  
+  print(place_id)
   details = google_place_details(place_id = place_id, key = apikey)
   
   Sys.sleep(runif(1, 0, pause_length))
   
-  reviews = details$result$reviews$text
-  author_name = details$result$reviews$author_name
+  all.reviews = details$result$reviews$text
+  author.names = details$result$reviews$author_name
   address = details$result$formatted_address
   place.lat = details$result$geometry$location$lat
   place.lon = details$result$geometry$location$lng
   price.level = details$result$price_level
   
-  no_reviews <- ifelse(details$result$reviews$text[1] == "", TRUE, FALSE)
-  
-  m = as.data.frame(place_id = rep(place_id, length(reviews)),
-             reviews = ifelse(no_reviews, NA, reviews),
-             author_name = ifelse(is.null(author_name), rep(NA, length(reviews)), rep(author_name, length(reviews))),
-             address = ifelse(is.null(address), rep(NA, length(reviews)), rep(place_id, length(address))),
-             place.lat = ifelse(is.null(place.lat), rep(NA, length(reviews)), rep(place.lat, length(reviews))),
-             place.lon = ifelse(is.null(place.lon), rep(NA, length(reviews)), rep(place.lon, length(reviews))),
-             price.level = ifelse(is.null(price.level), rep(NA, length(reviews)), rep(price.level, length(reviews))))
+  no.reviews <- ifelse(is.null(all.reviews), TRUE, FALSE)
 
+  df = data.frame(place.id = place_id,
+                 reviews = ifelse(no.reviews, NA, list(all.reviews)),
+                 author.names = ifelse(no.reviews, NA, list(author.names)),
+                 address = ifelse(is.null(address), NA, address),
+                 place.lat = ifelse(is.null(place.lat), NA, place.lat),
+                 place.lon = ifelse(is.null(place.lon), NA, place.lon),
+                 price.level = ifelse(is.null(price.level), NA, price.level))
+  names(df)[2:3] = c("reviews", "author.names") # ugh this shouldn't be necessary
+  df
 }
 
 ### read in all files of place ids
@@ -44,8 +45,9 @@ all_city_files <- list.files("../data/place_ids/")
 ### loop over cities, get reviews for each place id, and write to feather file
 for (i in 1:length(all_city_files)) {
   
+  # get city name
   city_name = unlist(str_split(all_city_files[i], "_"))[1]
-  print(city_name)
+  print(paste0("########## ", city_name, " ##########"))
   
   # get all place ids for this city
   ids = read_feather(paste0("../data/place_ids/", all_city_files[i]))
@@ -59,5 +61,3 @@ for (i in 1:length(all_city_files)) {
   write_feather(places_with_reviews, 
                 paste0("../data/reviews/", city_name, "_reviews"))
 }
-
-place_id = "ChIJ202o56sr8IcRtIlPdgAnVqc"#pizza_ranch id

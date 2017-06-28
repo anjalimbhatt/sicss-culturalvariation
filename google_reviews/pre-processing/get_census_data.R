@@ -139,6 +139,6 @@ map(place_codes$place, get_census_data)
 
 
 
-m = read_feather( "../data/reviews/Ackworth_reviews")
+m = read_feather( "../data/reviews/Ackley_reviews")
 
 m$place_id = as.factor(m$place_id)
