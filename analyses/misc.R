@@ -43,18 +43,10 @@ coord2 = coord %>%
   mutate_geocode(value.place_name)
 
 map <- get_stamenmap(iowa_bounding_box, zoom = 5, maptype = "toner-lite")
-ggmap(map) _
-g
-
+ggmap(map)
 qmplot(lon, lat, 
        data = coord2, maptype = "toner-lite", color = I("red")) 
 
 ggmap(map) +
   geom_point(aes(x = lon, y = lat), data = coord2, alpha = .5, color = "red") +
   theme_bw()
-
-
-
-
-
-  

@@ -26,88 +26,53 @@ locations.trim = data.frame(lat = unlist(lapply(locations,
                         mutate_all(as.character) # this is because of mp
 
 # get meta_data for all places at each location (city)
-get_our_places <- function(lat, lon, location, radius, apikey, pause_length, max_pages){ 
-      lat = as.numeric(lat)
-      lon = as.numeric(lon)
- 
-      # first page
-      page1 = list(google_places(radius = radius,
-                        location = c(lat, lon),  
-                        key = apikey)) 
-      
-      if(is.null(names(page1))) {page1= purrr::flatten(page1)}
-      
-      Sys.sleep(runif(1, 0, pause_length))
-      
-      places1 = as.data.frame(cbind(place.id = page1$results$place_id,
-                                        name = unlist(page1$results$name),
-                                        types =  page1$results$types)) 
-      
-    if(is.null(page1$next_page_token)){
-     
-      places1 = places1 %>%
-         mutate(latitude = lat,
-                longitude = lon,
-                location = location)
-      
-        return(places1)
-
-    } else { #second page
-        page2 = google_places(radius = radius,
-                              location = c(lat, lon), 
-                              page_token = page1$next_page_token,
-                              key = apikey)
-        
-        if(is.null(names(page2))) {page2 = purrr::flatten(page2)}
-
-        
-        #Sys.sleep(runif(1, 0, pause_length))
-        
-        places2 = as.data.frame(cbind(place.id = page2$results$place_id,
-                                      name = unlist(page2$results$name),
-                                      types = page2$results$types)) 
-          
-          places12 = bind_rows(places1, places2)
-    }
-      
-    if(is.null(page2$next_page_token)){
-      
-      places12 = places12 %>%
-        mutate(latitude = lat,
-               longitude = lon,
-               location = location)
-      
-        
-        return(places12)
-          
-    } else {# third page
-      page3 = google_places(radius = radius,
-                            location = c(lat, lon), 
-                            page_token = page2$next_page_token,
-                            key = apikey)
-      
-      if(is.null(names(page3))) {page3 =  purrr::flatten(page3)}
-      
-      Sys.sleep(runif(1, 0, pause_length))
-      
-      places3 = as.data.frame(cbind(place.id = page3$results$place_id,
-                                    name = unlist(page3$results$name),
-                                    types =  page3$results$types)) %>%
-                    mutate(latitude = lat,
-                           latitude = lon,
-                           location = location)
-                  
-      places123 = bind_rows(places12, places3)
-      
-      places123 = places123 %>%
-        mutate(lat = lat,
-               lon = lon,
-               location = location)
-      
-      return(places123)
-    }
-}
+get_our_places <- function(lat, lon, location, radius, apikey, pause_length){ 
+  lat = as.numeric(lat)
+  lon = as.numeric(lon)
   
+  MAX_PAGES <- 3
+  current.page = 1
+  token = "first"
+  
+  all.places = data.frame(place.id = NA,
+                          name = NA,
+                          types = NA,
+                          latitude = NA,
+                          longitude = NA,
+                          location = NA)
+  
+  # first page
+  while(!is.null(token) & current.page < (MAX_PAGES + 1)) {
+    #print("hi")
+    page = list(google_places(radius = radius,
+                              location = c(lat, lon),  
+                              key = apikey)) 
+    
+    if(is.null(names(page))) {page = purrr::flatten(page)}
+    
+    Sys.sleep(runif(1, 0, pause_length))
+    
+    places = as.data.frame(cbind(place.id = page$results$place_id,
+                                 name = unlist(page$results$name),
+                                 types =  page$results$types)) 
+    if(current.page == 1){
+      all.places = places
+      print(all.places)
+    } else {
+      all.places = bind_rows(all.places, places)
+    }
+    
+    token = page$next_page_token 
+    current.page = current.page + 1
+    
+    print(current.page)
+    
+  }
+  
+  all.places
+  
+}
+
 # get reviews for each place at each city
 places <- locations.trim %>%
               slice(1) %>%
@@ -150,50 +115,5 @@ places.with.reviews = ids$place.id %>%
                         bind_rows()
 
 write_csv(places.with.reviews, "review_data.csv")
-
-get_our_places2 <- function(lat, lon, location, radius, apikey, pause_length){ 
-  lat = as.numeric(lat)
-  lon = as.numeric(lon)
-  
-  MAX_PAGES <- 4
-  current.page = 1
-  token = "first"
-  
-  all.places = data.frame(place.id = NA,
-                          name = NA,
-                          types = NA,
-                          latitude = NA,
-                          longitude = NA,
-                          location = NA)
-  
-  # first page
-  while(!is.null(token) & current.page < MAX_PAGES) {
-    print("hi")
-    page = list(google_places(radius = radius,
-                              location = c(lat, lon),  
-                              key = apikey)) 
-    
-    if(is.null(names(page))) {page = purrr::flatten(page)}
-    
-    Sys.sleep(runif(1, 0, pause_length))
-    
-    places = as.data.frame(cbind(place.id = page$results$place_id,
-                                 name = unlist(page$results$name),
-                                 types =  page$results$types)) 
-    
-    if(current.page == 1){
-      all.places = places
-      print(all.places)
-    } else {
-      all.places = bind_rows(all.places, places)
-    }
-    
-    token = page$next_page_token 
-    current.page = current.page + 1
-  }
-  
-  all.places
-  
-}
 
                                       

@@ -2,7 +2,7 @@ get_our_places <- function(lat, lon, location, radius, apikey, pause_length){
   lat = as.numeric(lat)
   lon = as.numeric(lon)
   
-  MAX_PAGES <- 4
+  MAX_PAGES <- 3
   current.page = 1
   token = "first"
   
@@ -14,8 +14,8 @@ get_our_places <- function(lat, lon, location, radius, apikey, pause_length){
                           location = NA)
   
   # first page
-  while(!is.null(token) & current.page < MAX_PAGES) {
-        print("hi")
+  while(!is.null(token) & current.page < (MAX_PAGES + 1)) {
+        #print("hi")
         page = list(google_places(radius = radius,
                                    location = c(lat, lon),  
                                    key = apikey)) 
@@ -27,7 +27,6 @@ get_our_places <- function(lat, lon, location, radius, apikey, pause_length){
         places = as.data.frame(cbind(place.id = page$results$place_id,
                                         name = unlist(page$results$name),
                                         types =  page$results$types)) 
-        
         if(current.page == 1){
           all.places = places
           print(all.places)
@@ -37,16 +36,13 @@ get_our_places <- function(lat, lon, location, radius, apikey, pause_length){
         
         token = page$next_page_token 
         current.page = current.page + 1
+        
+        print(current.page)
+        
 }
   
-all.places
+    all.places
   
 }
 
-x <- 1
-while(x < 5) {
-  x <- x+1 
-  #if (x == 3) next; 
-    print(x)
-  }
 

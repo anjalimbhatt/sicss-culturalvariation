@@ -17,12 +17,11 @@ coord = tw %>%
 ark_coords <- c(-94.61771,33.004106,-89.644838,36.499767)
 
 
-
 coord2 = coord %>%
   separate(coordinates, c("lat", "lon"), " ") %>%
   mutate(lon = as.numeric(lon),
-         lat = as.numeric(lat)) 
-  #mutate_geocode(aplace_name)
+         lat = as.numeric(lat)) %>% 
+  mutate_geocode(place_name)
 
 map <- get_stamenmap(ark_coords, zoom = 5, maptype = "toner-lite")
 ggmap(map)
