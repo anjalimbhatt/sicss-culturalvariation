@@ -14,3 +14,4 @@ apikey <- "AIzaSyCJY8-BuTVQpUKTgNiybB6UdHB6XqWBZiA"
 
 # get highway exit coordinates in csv
 # create function that calculates shortest distance from place to exit
+# look up how to get census information for addresses/coordinates
