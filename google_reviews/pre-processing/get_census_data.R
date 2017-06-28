@@ -16,14 +16,24 @@ cities = read.csv("../data/iowa_cities_wiki.csv", header = F)
 names(cities) = "city"
 
 get_place_codes <- function(this.place){
-    print(this.place)
-    geo.lookup(state = "IA", place = this.place) %>%
-      filter(!is.na(place)) %>%
-      mutate(our.place.name = this.place) %>%
-      slice(1)
+    df = geo.lookup(state = "IA", place = as.character(this.place)) 
+     
+     if (length(df) > 3){   
+       df %>%
+          filter(!is.na(place))%>%
+          mutate(our.place.name = this.place) %>%
+          slice(1) 
+  
+     } else {
+       data.frame(state = NA,
+               state.name = NA,
+               county.name = NA,
+               place  = NA,   
+               place.name = NA)
+     }
 }
 
-purrr::map(cities$city, get_place_codes) %>%
+m = place.codes = purrr::map_df(cities$city, get_place_codes) %>%
   bind_rows()
 
 CITYNAME = "Ankeny"

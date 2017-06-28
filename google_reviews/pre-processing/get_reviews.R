@@ -14,7 +14,7 @@ library(feather)
 RADIUS <- 5000 # in meters
 PAUSE_LENGTH <- 150 # 
 MAX_PAGES <- 200 # number of pages of results to open (20/page)
-API <-  "AIzaSyDNI7GK1VPH2fTLhpibFPd7DswTq4HulA0"
+APIKEY <-  "AIzaSyDNI7GK1VPH2fTLhpibFPd7DswTq4HulA0"
 
 
 get_our_stores <- function(place_id, apikey, pause_length){

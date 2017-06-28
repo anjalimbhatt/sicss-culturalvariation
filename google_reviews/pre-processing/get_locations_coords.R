@@ -9,8 +9,8 @@ library(stringr)
 library(feather)
 
 # params
-PAUSE_LENGTH <- 5 
-API <-  "AIzaSyCnLIvzHx8w2M-OSK8QQQtF2mlUct5ldGk"
+PAUSE_LENGTH <- 3 
+APIKEY <-  "AIzaSyCnLIvzHx8w2M-OSK8QQQtF2mlUct5ldGk"
 
 
 # list of cities

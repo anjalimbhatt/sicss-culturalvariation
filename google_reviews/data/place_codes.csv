@@ -1,0 +1,948 @@
+state,state.name,county.name,place,place.name,our.place.name
+19,Iowa,"Franklin County, Hardin County",190,Ackley city,Ackley
+19,Iowa,Warren County,235,Ackworth city,Ackworth
+19,Iowa,"Adair County, Guthrie County",370,Adair city,Adair
+19,Iowa,Dallas County,505,Adel city,Adel
+19,Iowa,Union County,595,Afton city,Afton
+19,Iowa,Wapello County,640,Agency city,Agency
+19,Iowa,Washington County,730,Ainsworth city,Ainsworth
+19,Iowa,Plymouth County,775,Akron city,Akron
+19,Iowa,Buena Vista County,865,Albert City city,Albert City
+19,Iowa,Monroe County,910,Albia city,Albia
+19,Iowa,Marshall County,955,Albion city,Albion
+19,Iowa,Linn County,1000,Alburnett city,Alburnett
+19,Iowa,Hardin County,1045,Alden city,Alden
+19,Iowa,Franklin County,1090,Alexander city,Alexander
+19,Iowa,Kossuth County,1135,Algona city,Algona
+19,Iowa,Polk County,1180,Alleman city,Alleman
+19,Iowa,Wayne County,1270,Allerton city,Allerton
+19,Iowa,Butler County,1315,Allison city,Allison
+19,Iowa,Buena Vista County,1495,Alta city,Alta
+19,Iowa,Chickasaw County,1540,Alta Vista city,Alta Vista
+19,Iowa,Sioux County,1585,Alton city,Alton
+19,Iowa,Polk County,1630,Altoona city,Altoona
+19,Iowa,Lyon County,1675,Alvord city,Alvord
+19,Iowa,Story County,1855,Ames city,Ames
+19,Iowa,Jones County,1990,Anamosa city,Anamosa
+19,Iowa,Clinton County,2080,Andover city,Andover
+19,Iowa,Jackson County,2125,Andrew city,Andrew
+19,Iowa,Cass County,2260,Anita city,Anita
+19,Iowa,Polk County,2305,Ankeny city,Ankeny
+19,Iowa,Woodbury County,2350,Anthon city,Anthon
+19,Iowa,Butler County,2395,Aplington city,Aplington
+19,Iowa,Carroll County,2485,Arcadia city,Arcadia
+19,Iowa,O'Brien County,2530,Archer city,Archer
+19,Iowa,Butler County,2620,Aredale city,Aredale
+19,Iowa,Crawford County,2755,Arion city,Arion
+19,Iowa,Union County,2800,Arispe city,Arispe
+19,Iowa,Fayette County,2845,Arlington city,Arlington
+19,Iowa,Emmet County,2935,Armstrong city,Armstrong
+19,Iowa,Dickinson County,3025,Arnolds Park city,Arnolds Park
+19,Iowa,Ida County,3115,Arthur city,Arthur
+19,Iowa,Dubuque County,3160,Asbury city,Asbury
+19,Iowa,Osceola County,3295,Ashton city,Ashton
+19,Iowa,Crawford County,3340,Aspinwall city,Aspinwall
+19,Iowa,Muscatine County,3385,Atalissa city,Atalissa
+19,Iowa,Benton County,3475,Atkins city,Atkins
+19,Iowa,Cass County,3520,Atlantic city,Atlantic
+19,Iowa,Sac County,3610,Auburn city,Auburn
+19,Iowa,Audubon County,3655,Audubon city,Audubon
+19,Iowa,Cherokee County,3745,Aurelia city,Aurelia
+19,Iowa,Buchanan County,3835,Aurora city,Aurora
+19,Iowa,Pottawattamie County,3970,Avoca city,Avoca
+19,Iowa,Palo Alto County,4105,Ayrshire city,Ayrshire
+19,Iowa,Webster County,4195,Badger city,Badger
+19,Iowa,Guthrie County,4240,Bagley city,Bagley
+19,Iowa,Jackson County,4330,Baldwin city,Baldwin
+19,Iowa,Dubuque County,4375,Balltown city,Balltown
+19,Iowa,Kossuth County,4420,Bancroft city,Bancroft
+19,Iowa,Dubuque County,4510,Bankston city,Bankston
+19,Iowa,"Mahaska County, Poweshiek County",4555,Barnes City city,Barnes City
+19,Iowa,Webster County,4645,Barnum city,Barnum
+19,Iowa,Chickasaw County,4780,Bassett city,Bassett
+19,Iowa,Jefferson County,4825,Batavia city,Batavia
+19,Iowa,Ida County,4870,Battle Creek city,Battle Creek
+19,Iowa,Jasper County,4915,Baxter city,Baxter
+19,Iowa,Guthrie County,4960,Bayard city,Bayard
+19,Iowa,Mahaska County,5050,Beacon city,Beacon
+19,Iowa,Ringgold County,5095,Beaconsfield city,Beaconsfield
+19,Iowa,Grundy County,5140,Beaman city,Beaman
+19,Iowa,Boone County,5185,Beaver city,Beaver
+19,Iowa,Taylor County,5365,Bedford city,Bedford
+19,Iowa,Benton County,5590,Belle Plaine city,Belle Plaine
+19,Iowa,Jackson County,5635,Bellevue city,Bellevue
+19,Iowa,Wright County,5680,Belmond city,Belmond
+19,Iowa,Cedar County,5770,Bennett city,Bennett
+19,Iowa,Ringgold County,5905,Benton city,Benton
+19,Iowa,Boone County,6040,Berkley city,Berkley
+19,Iowa,Dubuque County,6085,Bernard city,Bernard
+19,Iowa,Linn County,6175,Bertram city,Bertram
+19,Iowa,Scott County,6355,Bettendorf city,Bettendorf
+19,Iowa,"Madison County, Warren County",6490,Bevington city,Bevington
+19,Iowa,Van Buren County,6625,Birmingham city,Birmingham
+19,Iowa,Hamilton County,6760,Blairsburg city,Blairsburg
+19,Iowa,Benton County,6805,Blairstown city,Blairstown
+19,Iowa,Wapello County,6850,Blakesburg city,Blakesburg
+19,Iowa,Page County,6895,Blanchard city,Blanchard
+19,Iowa,Monona County,6940,Blencoe city,Blencoe
+19,Iowa,Taylor County,6985,Blockton city,Blockton
+19,Iowa,Davis County,7030,Bloomfield city,Bloomfield
+19,Iowa,"Muscatine County, Scott County",7075,Blue Grass city,Blue Grass
+19,Iowa,Humboldt County,7210,Bode city,Bode
+19,Iowa,Van Buren County,7345,Bonaparte city,Bonaparte
+19,Iowa,Polk County,7390,Bondurant city,Bondurant
+19,Iowa,Boone County,7480,Boone city,Boone
+19,Iowa,Dallas County,7660,Bouton city,Bouton
+19,Iowa,Boone County,7750,Boxholm city,Boxholm
+19,Iowa,Sioux County,7840,Boyden city,Boyden
+19,Iowa,Page County,7930,Braddyville city,Braddyville
+19,Iowa,Humboldt County,8065,Bradgate city,Bradgate
+19,Iowa,Buchanan County,8155,Brandon city,Brandon
+19,Iowa,Audubon County,8200,Brayton city,Brayton
+19,Iowa,Carroll County,8290,Breda city,Breda
+19,Iowa,Adair County,8425,Bridgewater city,Bridgewater
+19,Iowa,Washington County,8470,Brighton city,Brighton
+19,Iowa,Butler County,8560,Bristow city,Bristow
+19,Iowa,Hancock County,8605,Britt city,Britt
+19,Iowa,Woodbury County,8650,Bronson city,Bronson
+19,Iowa,Poweshiek County,8695,Brooklyn city,Brooklyn
+19,Iowa,Plymouth County,8875,Brunsville city,Brunsville
+19,Iowa,Crawford County,9145,Buck Grove city,Buck Grove
+19,Iowa,Hardin County,9100,Buckeye city,Buckeye
+19,Iowa,Scott County,9235,Buffalo city,Buffalo
+19,Iowa,Winnebago County,9280,Buffalo Center city,Buffalo Center
+19,Iowa,Des Moines County,9550,Burlington city,Burlington
+19,Iowa,Kossuth County,9685,Burt city,Burt
+19,Iowa,Marion County,9730,Bussey city,Bussey
+19,Iowa,Clinton County,9820,Calamus city,Calamus
+19,Iowa,Webster County,9955,Callender city,Callender
+19,Iowa,Winneshiek County,10045,Calmar city,Calmar
+19,Iowa,O'Brien County,10090,Calumet city,Calumet
+19,Iowa,Clinton County,10135,Camanche city,Camanche
+19,Iowa,Story County,10225,Cambridge city,Cambridge
+19,Iowa,Van Buren County,10450,Cantril city,Cantril
+19,Iowa,Adams County,10585,Carbon city,Carbon
+19,Iowa,"Polk County, Warren County",10765,Carlisle city,Carlisle
+19,Iowa,Mitchell County,11035,Carpenter city,Carpenter
+19,Iowa,Carroll County,11080,Carroll city,Carroll
+19,Iowa,Pottawattamie County,11170,Carson city,Carson
+19,Iowa,Pottawattamie County,11215,Carter Lake city,Carter Lake
+19,Iowa,"Dubuque County, Jones County",11305,Cascade city,Cascade
+19,Iowa,"Adair County, Guthrie County",11395,Casey city,Casey
+19,Iowa,Winneshiek County,11485,Castalia city,Castalia
+19,Iowa,Monona County,11530,Castana city,Castana
+19,Iowa,Black Hawk County,11755,Cedar Falls city,Cedar Falls
+19,Iowa,Linn County,12000,Cedar Rapids city,Cedar Rapids
+19,Iowa,Jones County,12225,Center Junction city,Center Junction
+19,Iowa,Linn County,12270,Center Point city,Center Point
+19,Iowa,Appanoose County,12315,Centerville city,Centerville
+19,Iowa,Linn County,12495,Central City city,Central City
+19,Iowa,Dubuque County,12630,Centralia city,Centralia
+19,Iowa,Lucas County,12720,Chariton city,Chariton
+19,Iowa,Floyd County,12765,Charles City city,Charles City
+19,Iowa,Clinton County,12855,Charlotte city,Charlotte
+19,Iowa,Crawford County,12900,Charter Oak city,Charter Oak
+19,Iowa,Sioux County,12945,Chatsworth city,Chatsworth
+19,Iowa,Tama County,12990,Chelsea city,Chelsea
+19,Iowa,Cherokee County,13080,Cherokee city,Cherokee
+19,Iowa,Howard County,13125,Chester city,Chester
+19,Iowa,Wapello County,13215,Chillicothe city,Chillicothe
+19,Iowa,Greene County,13350,Churdan city,Churdan
+19,Iowa,Appanoose County,13395,Cincinnati city,Cincinnati
+19,Iowa,Webster County,13485,Clare city,Clare
+19,Iowa,Cedar County,13530,Clarence city,Clarence
+19,Iowa,Page County,13575,Clarinda city,Clarinda
+19,Iowa,Wright County,13620,Clarion city,Clarion
+19,Iowa,Butler County,13755,Clarksville city,Clarksville
+19,Iowa,Clayton County,13845,Clayton city,Clayton
+19,Iowa,Cerro Gordo County,14025,Clear Lake city,Clear Lake
+19,Iowa,"Ringgold County, Taylor County",13980,Clearfield city,Clearfield
+19,Iowa,Cherokee County,14115,Cleghorn city,Cleghorn
+19,Iowa,Marshall County,14160,Clemons city,Clemons
+19,Iowa,Fayette County,14250,Clermont city,Clermont
+19,Iowa,Clinton County,14430,Clinton city,Clinton
+19,Iowa,Wayne County,14475,Clio city,Clio
+19,Iowa,"Dallas County, Polk County",14520,Clive city,Clive
+19,Iowa,Tama County,14655,Clutier city,Clutier
+19,Iowa,Montgomery County,14880,Coburg city,Coburg
+19,Iowa,Linn County,14925,Coggon city,Coggon
+19,Iowa,Page County,14970,Coin city,Coin
+19,Iowa,Delaware County,15015,Colesburg city,Colesburg
+19,Iowa,Jasper County,15060,Colfax city,Colfax
+19,Iowa,Page County,15105,College Springs city,College Springs
+19,Iowa,Story County,15195,Collins city,Collins
+19,Iowa,Story County,15240,Colo city,Colo
+19,Iowa,Louisa County,15375,Columbus City city,Columbus City
+19,Iowa,Louisa County,15420,Columbus Junction city,Columbus Junction
+19,Iowa,Floyd County,15465,Colwell city,Colwell
+19,Iowa,Muscatine County,15645,Conesville city,Conesville
+19,Iowa,Grundy County,15825,Conrad city,Conrad
+19,Iowa,Taylor County,15960,Conway city,Conway
+19,Iowa,"Carroll County, Guthrie County",16050,Coon Rapids city,Coon Rapids
+19,Iowa,"Henry County, Jefferson County, Washington County",16140,Coppock city,Coppock
+19,Iowa,Johnson County,16230,Coralville city,Coralville
+19,Iowa,Adams County,16500,Corning city,Corning
+19,Iowa,Woodbury County,16545,Correctionville city,Correctionville
+19,Iowa,Hancock County,16590,Corwith city,Corwith
+19,Iowa,Wayne County,16635,Corydon city,Corydon
+19,Iowa,Louisa County,16725,Cotter city,Cotter
+19,Iowa,Franklin County,16815,Coulter city,Coulter
+19,Iowa,Pottawattamie County,16860,Council Bluffs city,Council Bluffs
+19,Iowa,Plymouth County,16950,Craig city,Craig
+19,Iowa,Washington County,17130,Crawfordsville city,Crawfordsville
+19,Iowa,Pottawattamie County,17175,Crescent city,Crescent
+19,Iowa,Howard County,17220,Cresco city,Cresco
+19,Iowa,Union County,17265,Creston city,Creston
+19,Iowa,Union County,17490,Cromwell city,Cromwell
+19,Iowa,Hancock County,17670,Crystal Lake city,Crystal Lake
+19,Iowa,Cass County,17760,Cumberland city,Cumberland
+19,Iowa,Warren County,17850,Cumming city,Cumming
+19,Iowa,Palo Alto County,17895,Curlew city,Curlew
+19,Iowa,Woodbury County,17940,Cushing city,Cushing
+19,Iowa,Palo Alto County,17985,Cylinder city,Cylinder
+19,Iowa,Humboldt County,18075,Dakota City city,Dakota City
+19,Iowa,Dallas County,18255,Dallas Center city,Dallas Center
+19,Iowa,Greene County,18345,Dana city,Dana
+19,Iowa,Woodbury County,18390,Danbury city,Danbury
+19,Iowa,Des Moines County,18435,Danville city,Danville
+19,Iowa,Scott County,19000,Davenport city,Davenport
+19,Iowa,Decatur County,19090,Davis City city,Davis City
+19,Iowa,Dallas County,19135,Dawson city,Dawson
+19,Iowa,Webster County,19180,Dayton city,Dayton
+19,Iowa,Dallas County,21045,De Soto city,De Soto
+19,Iowa,Clinton County,21180,De Witt city,De Witt
+19,Iowa,Decatur County,19360,Decatur City city,Decatur City
+19,Iowa,Winneshiek County,19405,Decorah city,Decorah
+19,Iowa,Carroll County,19450,Dedham city,Dedham
+19,Iowa,Poweshiek County,19495,Deep River city,Deep River
+19,Iowa,Shelby County,19585,Defiance city,Defiance
+19,Iowa,Delaware County,19630,Delaware city,Delaware
+19,Iowa,Delaware County,19675,Delhi city,Delhi
+19,Iowa,Clinton County,19720,Delmar city,Delmar
+19,Iowa,Crawford County,19765,Deloit city,Deloit
+19,Iowa,Ringgold County,19810,Delphos city,Delphos
+19,Iowa,Keokuk County,19855,Delta city,Delta
+19,Iowa,Crawford County,19945,Denison city,Denison
+19,Iowa,Bremer County,20035,Denver city,Denver
+19,Iowa,Lucas County,20125,Derby city,Derby
+19,Iowa,"Polk County, Warren County",21000,Des Moines city,Des Moines
+19,Iowa,Dallas County,21225,Dexter city,Dexter
+19,Iowa,Ringgold County,21270,Diagonal city,Diagonal
+19,Iowa,Clay County,21360,Dickens city,Dickens
+19,Iowa,Grundy County,21405,Dike city,Dike
+19,Iowa,Scott County,21540,Dixon city,Dixon
+19,Iowa,Emmet County,21675,Dolliver city,Dolliver
+19,Iowa,Scott County,21720,Donahue city,Donahue
+19,Iowa,Lee County,21810,Donnellson city,Donnellson
+19,Iowa,Lyon County,21900,Doon city,Doon
+19,Iowa,Cerro Gordo County,22080,Dougherty city,Dougherty
+19,Iowa,Crawford County,22215,Dow City city,Dow City
+19,Iowa,"Franklin County, Wright County",22305,Dows city,Dows
+19,Iowa,Davis County,22350,Drakesville city,Drakesville
+19,Iowa,Dubuque County,22395,Dubuque city,Dubuque
+19,Iowa,Butler County,22620,Dumont city,Dumont
+19,Iowa,Webster County,22755,Duncombe city,Duncombe
+19,Iowa,Delaware County,22800,Dundee city,Dundee
+19,Iowa,Black Hawk County,22845,Dunkerton city,Dunkerton
+19,Iowa,"Crawford County, Harrison County",22890,Dunlap city,Dunlap
+19,Iowa,Dubuque County,22935,Durango city,Durango
+19,Iowa,"Cedar County, Muscatine County, Scott County",22980,Durant city,Durant
+19,Iowa,"Delaware County, Dubuque County",23115,Dyersville city,Dyersville
+19,Iowa,Tama County,23160,Dysart city,Dysart
+19,Iowa,Wright County,23250,Eagle Grove city,Eagle Grove
+19,Iowa,Madison County,23340,Earlham city,Earlham
+19,Iowa,Shelby County,23385,Earling city,Earling
+19,Iowa,Delaware County,23430,Earlville city,Earlville
+19,Iowa,Sac County,23475,Early city,Early
+19,Iowa,Madison County,23790,East Peru city,East Peru
+19,Iowa,"Mahaska County, Monroe County, Wapello County",23970,Eddyville city,Eddyville
+19,Iowa,"Clayton County, Delaware County",24060,Edgewood city,Edgewood
+19,Iowa,Tama County,24375,Elberon city,Elberon
+19,Iowa,Wapello County,24420,Eldon city,Eldon
+19,Iowa,Hardin County,24465,Eldora city,Eldora
+19,Iowa,Scott County,24600,Eldridge city,Eldridge
+19,Iowa,Fayette County,24645,Elgin city,Elgin
+19,Iowa,Shelby County,24780,Elk Horn city,Elk Horn
+19,Iowa,Black Hawk County,24870,Elk Run Heights city,Elk Run Heights
+19,Iowa,Clayton County,24690,Elkader city,Elkader
+19,Iowa,Polk County,24735,Elkhart city,Elkhart
+19,Iowa,Clayton County,24825,Elkport city,Elkport
+19,Iowa,Montgomery County,24915,Elliott city,Elliott
+19,Iowa,Ringgold County,25005,Ellston city,Ellston
+19,Iowa,Hamilton County,25050,Ellsworth city,Ellsworth
+19,Iowa,Howard County,25095,Elma city,Elma
+19,Iowa,Linn County,25365,Ely city,Ely
+19,Iowa,Mills County,25500,Emerson city,Emerson
+19,Iowa,Palo Alto County,25590,Emmetsburg city,Emmetsburg
+19,Iowa,Dubuque County,25725,Epworth city,Epworth
+19,Iowa,Page County,25815,Essex city,Essex
+19,Iowa,Emmet County,25860,Estherville city,Estherville
+19,Iowa,Black Hawk County,25995,Evansdale city,Evansdale
+19,Iowa,Clay County,26175,Everly city,Everly
+19,Iowa,Audubon County,26265,Exira city,Exira
+19,Iowa,Appanoose County,26310,Exline city,Exline
+19,Iowa,"Buchanan County, Fayette County",26355,Fairbank city,Fairbank
+19,Iowa,Linn County,26400,Fairfax city,Fairfax
+19,Iowa,Jefferson County,26445,Fairfield city,Fairfield
+19,Iowa,Dubuque County,26760,Farley city,Farley
+19,Iowa,Clayton County,26850,Farmersburg city,Farmersburg
+19,Iowa,Van Buren County,26895,Farmington city,Farmington
+19,Iowa,"Calhoun County, Webster County",26940,Farnhamville city,Farnhamville
+19,Iowa,Fremont County,26985,Farragut city,Farragut
+19,Iowa,Fayette County,27165,Fayette city,Fayette
+19,Iowa,Kossuth County,27210,Fenton city,Fenton
+19,Iowa,Marshall County,27255,Ferguson city,Ferguson
+19,Iowa,Worth County,27390,Fertile city,Fertile
+19,Iowa,Davis County,27975,Floris city,Floris
+19,Iowa,Floyd County,28020,Floyd city,Floyd
+19,Iowa,Pocahontas County,28245,Fonda city,Fonda
+19,Iowa,Adair County,28290,Fontanelle city,Fontanelle
+19,Iowa,"Hancock County, Winnebago County",28380,Forest City city,Forest City
+19,Iowa,Winneshiek County,28425,Fort Atkinson city,Fort Atkinson
+19,Iowa,Webster County,28515,Fort Dodge city,Fort Dodge
+19,Iowa,Lee County,28605,Fort Madison city,Fort Madison
+19,Iowa,Clay County,28650,Fostoria city,Fostoria
+19,Iowa,Lee County,28740,Franklin city,Franklin
+19,Iowa,Boone County,28920,Fraser city,Fraser
+19,Iowa,Chickasaw County,28965,Fredericksburg city,Fredericksburg
+19,Iowa,Bremer County,29010,Frederika city,Frederika
+19,Iowa,Louisa County,29055,Fredonia city,Fredonia
+19,Iowa,Mahaska County,29190,Fremont city,Fremont
+19,Iowa,Muscatine County,29280,Fruitland city,Fruitland
+19,Iowa,Wright County,29550,Galt city,Galt
+19,Iowa,Ida County,29595,Galva city,Galva
+19,Iowa,Clayton County,29685,Garber city,Garber
+19,Iowa,Decatur County,29775,Garden Grove city,Garden Grove
+19,Iowa,Clayton County,29910,Garnavillo city,Garnavillo
+19,Iowa,Hancock County,29955,Garner city,Garner
+19,Iowa,Benton County,30000,Garrison city,Garrison
+19,Iowa,Tama County,30045,Garwin city,Garwin
+19,Iowa,Franklin County,30135,Geneva city,Geneva
+19,Iowa,Lyon County,30225,George city,George
+19,Iowa,Keokuk County,30540,Gibson city,Gibson
+19,Iowa,Story County,30630,Gilbert city,Gilbert
+19,Iowa,Black Hawk County,30675,Gilbertville city,Gilbertville
+19,Iowa,Clay County,30810,Gillett Grove city,Gillett Grove
+19,Iowa,Marshall County,30900,Gilman city,Gilman
+19,Iowa,"Humboldt County, Pocahontas County",30945,Gilmore City city,Gilmore City
+19,Iowa,Tama County,31035,Gladbrook city,Gladbrook
+19,Iowa,Mills County,31350,Glenwood city,Glenwood
+19,Iowa,Carroll County,31395,Glidden city,Glidden
+19,Iowa,Wright County,31530,Goldfield city,Goldfield
+19,Iowa,Hancock County,31575,Goodell city,Goodell
+19,Iowa,Clinton County,31665,Goose Lake city,Goose Lake
+19,Iowa,Webster County,31710,Gowrie city,Gowrie
+19,Iowa,Palo Alto County,31800,Graettinger city,Graettinger
+19,Iowa,Dubuque County,31845,Graf city,Graf
+19,Iowa,Worth County,31890,Grafton city,Grafton
+19,Iowa,Greene County,31980,Grand Junction city,Grand Junction
+19,Iowa,Clinton County,32025,Grand Mound city,Grand Mound
+19,Iowa,Decatur County,32070,Grand River city,Grand River
+19,Iowa,Louisa County,32115,Grandview city,Grandview
+19,Iowa,"Dallas County, Polk County",32160,Granger city,Granger
+19,Iowa,Montgomery County,32295,Grant city,Grant
+19,Iowa,Sioux County,32475,Granville city,Granville
+19,Iowa,Taylor County,32520,Gravity city,Gravity
+19,Iowa,Audubon County,32565,Gray city,Gray
+19,Iowa,Delaware County,32610,Greeley city,Greeley
+19,Iowa,"Butler County, Floyd County",32745,Greene city,Greene
+19,Iowa,Adair County,32790,Greenfield city,Greenfield
+19,Iowa,Clay County,32970,Greenville city,Greenville
+19,Iowa,"Dallas County, Polk County",33060,Grimes city,Grimes
+19,Iowa,Poweshiek County,33105,Grinnell city,Grinnell
+19,Iowa,Cass County,33150,Griswold city,Griswold
+19,Iowa,Grundy County,33195,Grundy Center city,Grundy Center
+19,Iowa,Emmet County,33240,Gruver city,Gruver
+19,Iowa,Poweshiek County,33285,Guernsey city,Guernsey
+19,Iowa,Guthrie County,33420,Guthrie Center city,Guthrie Center
+19,Iowa,Clayton County,33465,Guttenberg city,Guttenberg
+19,Iowa,Carroll County,33645,Halbur city,Halbur
+19,Iowa,Fremont County,33780,Hamburg city,Hamburg
+19,Iowa,Marion County,33870,Hamilton city,Hamilton
+19,Iowa,Franklin County,33960,Hampton city,Hampton
+19,Iowa,Pottawattamie County,34005,Hancock city,Hancock
+19,Iowa,Worth County,34185,Hanlontown city,Hanlontown
+19,Iowa,Franklin County,34365,Hansell city,Hansell
+19,Iowa,Webster County,34410,Harcourt city,Harcourt
+19,Iowa,Humboldt County,34455,Hardy city,Hardy
+19,Iowa,Shelby County,34500,Harlan city,Harlan
+19,Iowa,Keokuk County,34545,Harper city,Harper
+19,Iowa,Allamakee County,34590,Harpers Ferry city,Harpers Ferry
+19,Iowa,Osceola County,34635,Harris city,Harris
+19,Iowa,Warren County,34680,Hartford city,Hartford
+19,Iowa,O'Brien County,34725,Hartley city,Hartley
+19,Iowa,Poweshiek County,34770,Hartwick city,Hartwick
+19,Iowa,Marion County,34860,Harvey city,Harvey
+19,Iowa,Mills County,34995,Hastings city,Hastings
+19,Iowa,Pocahontas County,35130,Havelock city,Havelock
+19,Iowa,Marshall County,35220,Haverhill city,Haverhill
+19,Iowa,Sioux County,35265,Hawarden city,Hawarden
+19,Iowa,Fayette County,35310,Hawkeye city,Hawkeye
+19,Iowa,Keokuk County,35445,Hayesville city,Hayesville
+19,Iowa,Buchanan County,35580,Hazleton city,Hazleton
+19,Iowa,Keokuk County,35670,Hedrick city,Hedrick
+19,Iowa,Mills County,35715,Henderson city,Henderson
+19,Iowa,Page County,35760,Hepburn city,Hepburn
+19,Iowa,Linn County,35940,Hiawatha city,Hiawatha
+19,Iowa,Johnson County,36345,Hills city,Hills
+19,Iowa,Henry County,36390,Hillsboro city,Hillsboro
+19,Iowa,Plymouth County,36480,Hinton city,Hinton
+19,Iowa,Grundy County,36705,Holland city,Holland
+19,Iowa,Ida County,36840,Holstein city,Holstein
+19,Iowa,Dubuque County,36885,Holy Cross city,Holy Cross
+19,Iowa,Delaware County,37155,Hopkinton city,Hopkinton
+19,Iowa,Woodbury County,37200,Hornick city,Hornick
+19,Iowa,Sioux County,37290,Hospers city,Hospers
+19,Iowa,Lee County,37335,Houghton city,Houghton
+19,Iowa,Hardin County,37425,Hubbard city,Hubbard
+19,Iowa,Black Hawk County,37470,Hudson city,Hudson
+19,Iowa,Sioux County,37515,Hull city,Hull
+19,Iowa,Humboldt County,37560,Humboldt city,Humboldt
+19,Iowa,Wayne County,37605,Humeston city,Humeston
+19,Iowa,Story County,37920,Huxley city,Huxley
+19,Iowa,Ida County,38010,Ida Grove city,Ida Grove
+19,Iowa,Fremont County,38055,Imogene city,Imogene
+19,Iowa,Buchanan County,38100,Independence city,Independence
+19,Iowa,Warren County,38280,Indianola city,Indianola
+19,Iowa,Lyon County,38415,Inwood city,Inwood
+19,Iowa,Chickasaw County,38460,Ionia city,Ionia
+19,Iowa,Johnson County,38595,Iowa City city,Iowa City
+19,Iowa,Hardin County,38640,Iowa Falls city,Iowa Falls
+19,Iowa,Sioux County,38820,Ireton city,Ireton
+19,Iowa,Shelby County,39000,Irwin city,Irwin
+19,Iowa,Winneshiek County,39135,Jackson Junction city,Jackson Junction
+19,Iowa,Guthrie County,39225,Jamaica city,Jamaica
+19,Iowa,"Black Hawk County, Bremer County",39405,Janesville city,Janesville
+19,Iowa,Greene County,39450,Jefferson city,Jefferson
+19,Iowa,"Black Hawk County, Buchanan County",39585,Jesup city,Jesup
+19,Iowa,Hamilton County,39675,Jewell Junction city,Jewell Junction
+19,Iowa,Polk County,39765,Johnston city,Johnston
+19,Iowa,Worth County,39855,Joice city,Joice
+19,Iowa,Calhoun County,39900,Jolley city,Jolley
+19,Iowa,Washington County,40170,Kalona city,Kalona
+19,Iowa,Hamilton County,40215,Kamrar city,Kamrar
+19,Iowa,Hancock County,40260,Kanawha city,Kanawha
+19,Iowa,Ringgold County,40350,Kellerton city,Kellerton
+19,Iowa,Story County,40395,Kelley city,Kelley
+19,Iowa,Jasper County,40440,Kellogg city,Kellogg
+19,Iowa,Worth County,40665,Kensett city,Kensett
+19,Iowa,Lee County,40845,Keokuk city,Keokuk
+19,Iowa,Mahaska County,40890,Keomah Village city,Keomah Village
+19,Iowa,Van Buren County,40935,Keosauqua city,Keosauqua
+19,Iowa,Keokuk County,40980,Keota city,Keota
+19,Iowa,Keokuk County,41070,Keswick city,Keswick
+19,Iowa,Benton County,41115,Keystone city,Keystone
+19,Iowa,Audubon County,41295,Kimballton city,Kimballton
+19,Iowa,Plymouth County,41385,Kingsley city,Kingsley
+19,Iowa,Keokuk County,41475,Kinross city,Kinross
+19,Iowa,Shelby County,41520,Kirkman city,Kirkman
+19,Iowa,Wapello County,41565,Kirkville city,Kirkville
+19,Iowa,Crawford County,41610,Kiron city,Kiron
+19,Iowa,Hancock County,41655,Klemme city,Klemme
+19,Iowa,Calhoun County,41790,Knierim city,Knierim
+19,Iowa,Marion County,42015,Knoxville city,Knoxville
+19,Iowa,Jackson County,43050,La Motte city,La Motte
+19,Iowa,Black Hawk County,43365,La Porte City city,La Porte City
+19,Iowa,Warren County,42285,Lacona city,Lacona
+19,Iowa,Iowa County,42330,Ladora city,Ladora
+19,Iowa,Calhoun County,42465,Lake City city,Lake City
+19,Iowa,Winnebago County,42555,Lake Mills city,Lake Mills
+19,Iowa,Dickinson County,42600,Lake Park city,Lake Park
+19,Iowa,Sac County,42690,Lake View city,Lake View
+19,Iowa,Buena Vista County,42645,Lakeside city,Lakeside
+19,Iowa,Kossuth County,42825,Lakota city,Lakota
+19,Iowa,Jasper County,42870,Lambs Grove city,Lambs Grove
+19,Iowa,Decatur County,42960,Lamoni city,Lamoni
+19,Iowa,Buchanan County,43005,Lamont city,Lamont
+19,Iowa,Carroll County,43140,Lanesboro city,Lanesboro
+19,Iowa,Allamakee County,43275,Lansing city,Lansing
+19,Iowa,Lyon County,43410,Larchwood city,Larchwood
+19,Iowa,Cherokee County,43500,Larrabee city,Larrabee
+19,Iowa,Franklin County,43590,Latimer city,Latimer
+19,Iowa,Marshall County,43680,Laurel city,Laurel
+19,Iowa,Pocahontas County,43725,Laurens city,Laurens
+19,Iowa,Chickasaw County,43815,Lawler city,Lawler
+19,Iowa,Woodbury County,43905,Lawton city,Lawton
+19,Iowa,Scott County,44085,Le Claire city,Le Claire
+19,Iowa,"Marshall County, Tama County",44220,Le Grand city,Le Grand
+19,Iowa,Plymouth County,44400,Le Mars city,Le Mars
+19,Iowa,Decatur County,44580,Le Roy city,Le Roy
+19,Iowa,Kossuth County,44130,Ledyard city,Ledyard
+19,Iowa,Webster County,44265,Lehigh city,Lehigh
+19,Iowa,Mahaska County,44310,Leighton city,Leighton
+19,Iowa,Winnebago County,44355,Leland city,Leland
+19,Iowa,"Adams County, Taylor County",44490,Lenox city,Lenox
+19,Iowa,Decatur County,44535,Leon city,Leon
+19,Iowa,Lyon County,44670,Lester city,Lester
+19,Iowa,Louisa County,44715,Letts city,Letts
+19,Iowa,Cass County,44805,Lewis city,Lewis
+19,Iowa,Jefferson County,44985,Libertyville city,Libertyville
+19,Iowa,Carroll County,45030,Lidderdale city,Lidderdale
+19,Iowa,Howard County,45165,Lime Springs city,Lime Springs
+19,Iowa,Tama County,45255,Lincoln city,Lincoln
+19,Iowa,Dallas County,45390,Linden city,Linden
+19,Iowa,Wayne County,45435,Lineville city,Lineville
+19,Iowa,Buena Vista County,45480,Linn Grove city,Linn Grove
+19,Iowa,Linn County,45615,Lisbon city,Lisbon
+19,Iowa,Marshall County,45660,Liscomb city,Liscomb
+19,Iowa,Lyon County,45795,Little Rock city,Little Rock
+19,Iowa,Harrison County,45840,Little Sioux city,Little Sioux
+19,Iowa,Humboldt County,45975,Livermore city,Livermore
+19,Iowa,Jefferson County,46065,Lockridge city,Lockridge
+19,Iowa,Harrison County,46155,Logan city,Logan
+19,Iowa,Calhoun County,46245,Lohrville city,Lohrville
+19,Iowa,Kossuth County,46290,Lone Rock city,Lone Rock
+19,Iowa,Johnson County,46335,Lone Tree city,Lone Tree
+19,Iowa,Scott County,46425,Long Grove city,Long Grove
+19,Iowa,Union County,46515,Lorimor city,Lorimor
+19,Iowa,Clinton County,46605,Lost Nation city,Lost Nation
+19,Iowa,Monroe County,46830,Lovilia city,Lovilia
+19,Iowa,Clinton County,47010,Low Moor city,Low Moor
+19,Iowa,Cedar County,46920,Lowden city,Lowden
+19,Iowa,"Humboldt County, Kossuth County",47370,Lu Verne city,Lu Verne
+19,Iowa,Clayton County,47055,Luana city,Luana
+19,Iowa,Lucas County,47100,Lucas city,Lucas
+19,Iowa,Boone County,47280,Luther city,Luther
+19,Iowa,Dubuque County,47460,Luxemburg city,Luxemburg
+19,Iowa,Benton County,47505,Luzerne city,Luzerne
+19,Iowa,Jasper County,47595,Lynnville city,Lynnville
+19,Iowa,"Calhoun County, Sac County",47730,Lytton city,Lytton
+19,Iowa,Pottawattamie County,47955,Macedonia city,Macedonia
+19,Iowa,Madison County,48180,Macksburg city,Macksburg
+19,Iowa,Boone County,48450,Madrid city,Madrid
+19,Iowa,Harrison County,48495,Magnolia city,Magnolia
+19,Iowa,Jefferson County,48500,Maharishi Vedic City city,Maharishi Vedic City
+19,Iowa,Poweshiek County,48540,Malcom city,Malcom
+19,Iowa,Palo Alto County,48585,Mallard city,Mallard
+19,Iowa,Ringgold County,48675,Maloy city,Maloy
+19,Iowa,Mills County,48720,Malvern city,Malvern
+19,Iowa,Delaware County,48810,Manchester city,Manchester
+19,Iowa,Crawford County,48855,Manilla city,Manilla
+19,Iowa,Worth County,48900,Manly city,Manly
+19,Iowa,Carroll County,48945,Manning city,Manning
+19,Iowa,Calhoun County,48990,Manson city,Manson
+19,Iowa,Monona County,49170,Mapleton city,Mapleton
+19,Iowa,"Clinton County, Jackson County",49215,Maquoketa city,Maquoketa
+19,Iowa,Buena Vista County,49260,Marathon city,Marathon
+19,Iowa,Floyd County,49305,Marble Rock city,Marble Rock
+19,Iowa,Cherokee County,49350,Marcus city,Marcus
+19,Iowa,Iowa County,49395,Marengo city,Marengo
+19,Iowa,Linn County,49485,Marion city,Marion
+19,Iowa,Cass County,49575,Marne city,Marne
+19,Iowa,Clayton County,49620,Marquette city,Marquette
+19,Iowa,Marshall County,49755,Marshalltown city,Marshalltown
+19,Iowa,Jones County,49845,Martelle city,Martelle
+19,Iowa,Warren County,49890,Martensdale city,Martensdale
+19,Iowa,Keokuk County,49935,Martinsburg city,Martinsburg
+19,Iowa,Marion County,50070,Marysville city,Marysville
+19,Iowa,Cerro Gordo County,50160,Mason City city,Mason City
+19,Iowa,Delaware County,50205,Masonville city,Masonville
+19,Iowa,Cass County,50250,Massena city,Massena
+19,Iowa,Sioux County,50385,Matlock city,Matlock
+19,Iowa,Sioux County,50430,Maurice city,Maurice
+19,Iowa,Story County,50520,Maxwell city,Maxwell
+19,Iowa,Fayette County,50610,Maynard city,Maynard
+19,Iowa,Scott County,50655,Maysville city,Maysville
+19,Iowa,Story County,47775,McCallsburg city,McCallsburg
+19,Iowa,Scott County,47820,McCausland city,McCausland
+19,Iowa,Pottawattamie County,47865,McClelland city,McClelland
+19,Iowa,Clayton County,48000,McGregor city,McGregor
+19,Iowa,Mitchell County,48045,McIntire city,McIntire
+19,Iowa,Cedar County,50700,Mechanicsville city,Mechanicsville
+19,Iowa,Des Moines County,50790,Mediapolis city,Mediapolis
+19,Iowa,Marshall County,50880,Melbourne city,Melbourne
+19,Iowa,Marion County,50935,Melcher-Dallas city,Melcher-Dallas
+19,Iowa,Monroe County,50970,Melrose city,Melrose
+19,Iowa,Osceola County,51060,Melvin city,Melvin
+19,Iowa,Guthrie County,51105,Menlo city,Menlo
+19,Iowa,Cherokee County,51150,Meriden city,Meriden
+19,Iowa,Plymouth County,51375,Merrill city,Merrill
+19,Iowa,Cerro Gordo County,51420,Meservey city,Meservey
+19,Iowa,Des Moines County,51735,Middletown city,Middletown
+19,Iowa,Jackson County,52050,Miles city,Miles
+19,Iowa,Dickinson County,52095,Milford city,Milford
+19,Iowa,Iowa County,52230,Millersburg city,Millersburg
+19,Iowa,Wayne County,52275,Millerton city,Millerton
+19,Iowa,Clayton County,52410,Millville city,Millville
+19,Iowa,Warren County,52455,Milo city,Milo
+19,Iowa,Van Buren County,52500,Milton city,Milton
+19,Iowa,Dallas County,52545,Minburn city,Minburn
+19,Iowa,Pottawattamie County,52590,Minden city,Minden
+19,Iowa,Jasper County,52815,Mingo city,Mingo
+19,Iowa,Harrison County,52860,Missouri Valley city,Missouri Valley
+19,Iowa,Mitchell County,52905,Mitchell city,Mitchell
+19,Iowa,"Jasper County, Polk County",52950,Mitchellville city,Mitchellville
+19,Iowa,Harrison County,52995,Modale city,Modale
+19,Iowa,Harrison County,53175,Mondamin city,Mondamin
+19,Iowa,Jackson County,53265,Monmouth city,Monmouth
+19,Iowa,Clayton County,53310,Monona city,Monona
+19,Iowa,Jasper County,53355,Monroe city,Monroe
+19,Iowa,Poweshiek County,53490,Montezuma city,Montezuma
+19,Iowa,Jones County,53625,Monticello city,Monticello
+19,Iowa,Tama County,53670,Montour city,Montour
+19,Iowa,Lee County,53760,Montrose city,Montrose
+19,Iowa,Monona County,53850,Moorhead city,Moorhead
+19,Iowa,Webster County,53895,Moorland city,Moorland
+19,Iowa,"Appanoose County, Monroe County",53985,Moravia city,Moravia
+19,Iowa,Jones County,54030,Morley city,Morley
+19,Iowa,Louisa County,54120,Morning Sun city,Morning Sun
+19,Iowa,Grundy County,54165,Morrison city,Morrison
+19,Iowa,Appanoose County,54390,Moulton city,Moulton
+19,Iowa,Benton County,54435,Mount Auburn city,Mount Auburn
+19,Iowa,Ringgold County,54480,Mount Ayr city,Mount Ayr
+19,Iowa,Henry County,54705,Mount Pleasant city,Mount Pleasant
+19,Iowa,Van Buren County,54750,Mount Sterling city,Mount Sterling
+19,Iowa,Henry County,54795,Mount Union city,Mount Union
+19,Iowa,Linn County,54840,Mount Vernon city,Mount Vernon
+19,Iowa,Woodbury County,54930,Moville city,Moville
+19,Iowa,Clarke County,55065,Murray city,Murray
+19,Iowa,Muscatine County,55110,Muscatine city,Muscatine
+19,Iowa,Appanoose County,55200,Mystic city,Mystic
+19,Iowa,"Chickasaw County, Floyd County",55335,Nashua city,Nashua
+19,Iowa,Sac County,55515,Nemaha city,Nemaha
+19,Iowa,Pottawattamie County,55560,Neola city,Neola
+19,Iowa,Story County,55695,Nevada city,Nevada
+19,Iowa,Allamakee County,55785,New Albin city,New Albin
+19,Iowa,Chickasaw County,56100,New Hampton city,New Hampton
+19,Iowa,Butler County,56145,New Hartford city,New Hartford
+19,Iowa,Scott County,56280,New Liberty city,New Liberty
+19,Iowa,Henry County,56325,New London city,New London
+19,Iowa,Taylor County,56370,New Market city,New Market
+19,Iowa,Hardin County,56415,New Providence city,New Providence
+19,Iowa,Mahaska County,56460,New Sharon city,New Sharon
+19,Iowa,Dubuque County,56550,New Vienna city,New Vienna
+19,Iowa,Warren County,56595,New Virginia city,New Virginia
+19,Iowa,Buena Vista County,55965,Newell city,Newell
+19,Iowa,Benton County,56055,Newhall city,Newhall
+19,Iowa,Jasper County,56505,Newton city,Newton
+19,Iowa,Muscatine County,56685,Nichols city,Nichols
+19,Iowa,Adams County,56865,Nodaway city,Nodaway
+19,Iowa,"Cerro Gordo County, Floyd County",56910,Nora Springs city,Nora Springs
+19,Iowa,Clayton County,57135,North Buena Vista city,North Buena Vista
+19,Iowa,"Iowa County, Keokuk County",57225,North English city,North English
+19,Iowa,Johnson County,57360,North Liberty city,North Liberty
+19,Iowa,Chickasaw County,57495,North Washington city,North Washington
+19,Iowa,Page County,57045,Northboro city,Northboro
+19,Iowa,Worth County,57630,Northwood city,Northwood
+19,Iowa,"Polk County, Warren County",57675,Norwalk city,Norwalk
+19,Iowa,Benton County,57720,Norway city,Norway
+19,Iowa,Appanoose County,57945,Numa city,Numa
+19,Iowa,Pottawattamie County,58080,Oakland city,Oakland
+19,Iowa,Jasper County,58170,Oakland Acres city,Oakland Acres
+19,Iowa,Louisa County,58395,Oakville city,Oakville
+19,Iowa,Osceola County,58530,Ocheyedan city,Ocheyedan
+19,Iowa,Sac County,58575,Odebolt city,Odebolt
+19,Iowa,Fayette County,58620,Oelwein city,Oelwein
+19,Iowa,Boone County,58665,Ogden city,Ogden
+19,Iowa,Dickinson County,58710,Okoboji city,Okoboji
+19,Iowa,Henry County,58890,Olds city,Olds
+19,Iowa,Jones County,58980,Olin city,Olin
+19,Iowa,Keokuk County,59070,Ollie city,Ollie
+19,Iowa,Monona County,59115,Onawa city,Onawa
+19,Iowa,Jones County,59250,Onslow city,Onslow
+19,Iowa,Sioux County,59475,Orange City city,Orange City
+19,Iowa,Mitchell County,59520,Orchard city,Orchard
+19,Iowa,Adair County,59565,Orient city,Orient
+19,Iowa,Dickinson County,59655,Orleans city,Orleans
+19,Iowa,Mitchell County,59745,Osage city,Osage
+19,Iowa,Clarke County,59835,Osceola city,Osceola
+19,Iowa,Mahaska County,59925,Oskaloosa city,Oskaloosa
+19,Iowa,Winneshiek County,59970,Ossian city,Ossian
+19,Iowa,Clayton County,60015,Osterdock city,Osterdock
+19,Iowa,Webster County,60105,Otho city,Otho
+19,Iowa,Woodbury County,60240,Oto city,Oto
+19,Iowa,Humboldt County,60420,Ottosen city,Ottosen
+19,Iowa,Wapello County,60465,Ottumwa city,Ottumwa
+19,Iowa,Hardin County,60555,Owasa city,Owasa
+19,Iowa,Johnson County,60645,Oxford city,Oxford
+19,Iowa,Jones County,60690,Oxford Junction city,Oxford Junction
+19,Iowa,Plymouth County,60780,Oyens city,Oyens
+19,Iowa,Mills County,60825,Pacific Junction city,Pacific Junction
+19,Iowa,Jefferson County,60915,Packwood city,Packwood
+19,Iowa,Pocahontas County,61050,Palmer city,Palmer
+19,Iowa,Linn County,61230,Palo city,Palo
+19,Iowa,Shelby County,61275,Panama city,Panama
+19,Iowa,Guthrie County,42575,Lake Panorama CDP,Panora
+19,Iowa,Scott County,61365,Panorama Park city,Panorama Park
+19,Iowa,Butler County,61590,Parkersburg city,Parkersburg
+19,Iowa,Iowa County,61770,Parnell city,Parnell
+19,Iowa,Greene County,61815,Paton city,Paton
+19,Iowa,Madison County,61860,Patterson city,Patterson
+19,Iowa,O'Brien County,61905,Paullina city,Paullina
+19,Iowa,Marion County,62040,Pella city,Pella
+19,Iowa,Dubuque County,62130,Peosta city,Peosta
+19,Iowa,Dallas County,62355,Perry city,Perry
+19,Iowa,Harrison County,62445,Persia city,Persia
+19,Iowa,Clay County,62625,Peterson city,Peterson
+19,Iowa,Woodbury County,62760,Pierson city,Pierson
+19,Iowa,Boone County,62850,Pilot Mound city,Pilot Mound
+19,Iowa,Humboldt County,62985,Pioneer city,Pioneer
+19,Iowa,Harrison County,63075,Pisgah city,Pisgah
+19,Iowa,Bremer County,63210,Plainfield city,Plainfield
+19,Iowa,Appanoose County,63345,Plano city,Plano
+19,Iowa,Polk County,63525,Pleasant Hill city,Pleasant Hill
+19,Iowa,Jefferson County,63615,Pleasant Plain city,Pleasant Plain
+19,Iowa,Decatur County,63570,Pleasanton city,Pleasanton
+19,Iowa,Marion County,63750,Pleasantville city,Pleasantville
+19,Iowa,Pocahontas County,63840,Plover city,Plover
+19,Iowa,Cerro Gordo County,63885,Plymouth city,Plymouth
+19,Iowa,Pocahontas County,63975,Pocahontas city,Pocahontas
+19,Iowa,Polk County,64020,Polk City city,Polk City
+19,Iowa,Calhoun County,64065,Pomeroy city,Pomeroy
+19,Iowa,Franklin County,64110,Popejoy city,Popejoy
+19,Iowa,Shelby County,64200,Portsmouth city,Portsmouth
+19,Iowa,"Allamakee County, Clayton County",64290,Postville city,Postville
+19,Iowa,Jasper County,64470,Prairie City city,Prairie City
+19,Iowa,Linn County,64425,Prairieburg city,Prairieburg
+19,Iowa,Adams County,64560,Prescott city,Prescott
+19,Iowa,Jackson County,64605,Preston city,Preston
+19,Iowa,O'Brien County,64650,Primghar city,Primghar
+19,Iowa,Scott County,64740,Princeton city,Princeton
+19,Iowa,Wayne County,64875,Promise City city,Promise City
+19,Iowa,"Chickasaw County, Howard County",65010,Protivin city,Protivin
+19,Iowa,Davis County,65055,Pulaski city,Pulaski
+19,Iowa,Buchanan County,65235,Quasqueton city,Quasqueton
+19,Iowa,Cherokee County,65280,Quimby city,Quimby
+19,Iowa,Hardin County,65370,Radcliffe city,Radcliffe
+19,Iowa,Winnebago County,65415,Rake city,Rake
+19,Iowa,"Carroll County, Greene County",65505,Ralston city,Ralston
+19,Iowa,Fayette County,65550,Randalia city,Randalia
+19,Iowa,Hamilton County,65595,Randall city,Randall
+19,Iowa,Fremont County,65640,Randolph city,Randolph
+19,Iowa,Appanoose County,65730,Rathbun city,Rathbun
+19,Iowa,Black Hawk County,65820,Raymond city,Raymond
+19,Iowa,Bremer County,65910,Readlyn city,Readlyn
+19,Iowa,Jasper County,65955,Reasnor city,Reasnor
+19,Iowa,Montgomery County,66135,Red Oak city,Red Oak
+19,Iowa,Ringgold County,66000,Redding city,Redding
+19,Iowa,Dallas County,66045,Redfield city,Redfield
+19,Iowa,Grundy County,66315,Reinbeck city,Reinbeck
+19,Iowa,Buena Vista County,66360,Rembrandt city,Rembrandt
+19,Iowa,Plymouth County,66405,Remsen city,Remsen
+19,Iowa,Humboldt County,66450,Renwick city,Renwick
+19,Iowa,Marshall County,66540,Rhodes city,Rhodes
+19,Iowa,"Howard County, Mitchell County",66585,Riceville city,Riceville
+19,Iowa,Keokuk County,66720,Richland city,Richland
+19,Iowa,Dubuque County,66810,Rickardsville city,Rickardsville
+19,Iowa,Crawford County,66855,Ricketts city,Ricketts
+19,Iowa,Winneshiek County,67035,Ridgeway city,Ridgeway
+19,Iowa,Calhoun County,67125,Rinard city,Rinard
+19,Iowa,Emmet County,67170,Ringsted city,Ringsted
+19,Iowa,Greene County,67215,Rippey city,Rippey
+19,Iowa,Scott County,67350,Riverdale city,Riverdale
+19,Iowa,Washington County,67440,Riverside city,Riverside
+19,Iowa,Fremont County,67575,Riverton city,Riverton
+19,Iowa,Linn County,67800,Robins city,Robins
+19,Iowa,Cerro Gordo County,68025,Rock Falls city,Rock Falls
+19,Iowa,Lyon County,68160,Rock Rapids city,Rock Rapids
+19,Iowa,Sioux County,68205,Rock Valley city,Rock Valley
+19,Iowa,Floyd County,68070,Rockford city,Rockford
+19,Iowa,Cerro Gordo County,68250,Rockwell city,Rockwell
+19,Iowa,Calhoun County,68295,Rockwell City city,Rockwell City
+19,Iowa,Palo Alto County,68340,Rodman city,Rodman
+19,Iowa,Monona County,68385,Rodney city,Rodney
+19,Iowa,Story County,68475,Roland city,Roland
+19,Iowa,Pocahontas County,68520,Rolfe city,Rolfe
+19,Iowa,Henry County,68565,Rome city,Rome
+19,Iowa,Mahaska County,68700,Rose Hill city,Rose Hill
+19,Iowa,Clay County,68925,Rossie city,Rossie
+19,Iowa,Wright County,69015,Rowan city,Rowan
+19,Iowa,Buchanan County,69060,Rowley city,Rowley
+19,Iowa,Clay County,69105,Royal city,Royal
+19,Iowa,Floyd County,69195,Rudd city,Rudd
+19,Iowa,Polk County,69240,Runnells city,Runnells
+19,Iowa,Lucas County,69285,Russell city,Russell
+19,Iowa,Palo Alto County,69330,Ruthven city,Ruthven
+19,Iowa,Humboldt County,69375,Rutland city,Rutland
+19,Iowa,Delaware County,69465,Ryan city,Ryan
+19,Iowa,Jackson County,69510,Sabula city,Sabula
+19,Iowa,Sac County,69645,Sac City city,Sac City
+19,Iowa,Dubuque County,69690,Sageville city,Sageville
+19,Iowa,Henry County,70230,Salem city,Salem
+19,Iowa,Woodbury County,70320,Salix city,Salix
+19,Iowa,O'Brien County,70410,Sanborn city,Sanborn
+19,Iowa,Warren County,70590,Sandyville city,Sandyville
+19,Iowa,Winnebago County,71040,Scarville city,Scarville
+19,Iowa,Sac County,71085,Schaller city,Schaller
+19,Iowa,Crawford County,71130,Schleswig city,Schleswig
+19,Iowa,Greene County,71310,Scranton city,Scranton
+19,Iowa,Poweshiek County,71355,Searsboro city,Searsboro
+19,Iowa,Woodbury County,71625,Sergeant Bluff city,Sergeant Bluff
+19,Iowa,Wayne County,71760,Seymour city,Seymour
+19,Iowa,Page County,71895,Shambaugh city,Shambaugh
+19,Iowa,"Ringgold County, Union County",71940,Shannon City city,Shannon City
+19,Iowa,Taylor County,72075,Sharpsburg city,Sharpsburg
+19,Iowa,Franklin County,72210,Sheffield city,Sheffield
+19,Iowa,"Pottawattamie County, Shelby County",72300,Shelby city,Shelby
+19,Iowa,"Boone County, Polk County, Story County",72345,Sheldahl city,Sheldahl
+19,Iowa,"O'Brien County, Sioux County",72390,Sheldon city,Sheldon
+19,Iowa,Butler County,72435,Shell Rock city,Shell Rock
+19,Iowa,Benton County,72480,Shellsburg city,Shellsburg
+19,Iowa,"Fremont County, Page County",72525,Shenandoah city,Shenandoah
+19,Iowa,Dubuque County,72660,Sherrill city,Sherrill
+19,Iowa,Johnson County,72840,Shueyville city,Shueyville
+19,Iowa,Osceola County,72975,Sibley city,Sibley
+19,Iowa,Fremont County,73065,Sidney city,Sidney
+19,Iowa,Keokuk County,73110,Sigourney city,Sigourney
+19,Iowa,Mills County,73155,Silver City city,Silver City
+19,Iowa,Sioux County,73290,Sioux Center city,Sioux Center
+19,Iowa,"Plymouth County, Woodbury County",73335,Sioux City city,Sioux City
+19,Iowa,Buena Vista County,73425,Sioux Rapids city,Sioux Rapids
+19,Iowa,Story County,73515,Slater city,Slater
+19,Iowa,Woodbury County,73605,Sloan city,Sloan
+19,Iowa,Woodbury County,73650,Smithland city,Smithland
+19,Iowa,Monona County,73785,Soldier city,Soldier
+19,Iowa,Johnson County,73875,Solon city,Solon
+19,Iowa,Calhoun County,73920,Somers city,Somers
+19,Iowa,Keokuk County,74055,South English city,South English
+19,Iowa,Clay County,74280,Spencer city,Spencer
+19,Iowa,Winneshiek County,74370,Spillville city,Spillville
+19,Iowa,Dickinson County,74415,Spirit Lake city,Spirit Lake
+19,Iowa,Jackson County,74460,Spragueville city,Spragueville
+19,Iowa,Warren County,74685,Spring Hill city,Spring Hill
+19,Iowa,Jackson County,74505,Springbrook city,Springbrook
+19,Iowa,Linn County,74775,Springville city,Springville
+19,Iowa,Mitchell County,69735,St. Ansgar city,St. Ansgar
+19,Iowa,Marshall County,69780,St. Anthony city,St. Anthony
+19,Iowa,Madison County,69915,St. Charles city,St. Charles
+19,Iowa,Jackson County,69960,St. Donatus city,St. Donatus
+19,Iowa,Fayette County,70050,St. Lucas city,St. Lucas
+19,Iowa,Warren County,70095,St. Marys city,St. Marys
+19,Iowa,Clayton County,70140,St. Olaf city,St. Olaf
+19,Iowa,Lee County,70185,St. Paul city,St. Paul
+19,Iowa,Mitchell County,74820,Stacyville city,Stacyville
+19,Iowa,Hamilton County,74910,Stanhope city,Stanhope
+19,Iowa,"Buchanan County, Fayette County",74955,Stanley city,Stanley
+19,Iowa,Montgomery County,75000,Stanton city,Stanton
+19,Iowa,Cedar County,75045,Stanwood city,Stanwood
+19,Iowa,Marshall County,75135,State Center city,State Center
+19,Iowa,Hardin County,75180,Steamboat Rock city,Steamboat Rock
+19,Iowa,Van Buren County,75405,Stockport city,Stockport
+19,Iowa,Muscatine County,75450,Stockton city,Stockton
+19,Iowa,Buena Vista County,75630,Storm Lake city,Storm Lake
+19,Iowa,Story County,75675,Story City city,Story City
+19,Iowa,Grundy County,75720,Stout city,Stout
+19,Iowa,"Hamilton County, Webster County",75810,Stratford city,Stratford
+19,Iowa,Clayton County,75855,Strawberry Point city,Strawberry Point
+19,Iowa,Plymouth County,75945,Struble city,Struble
+19,Iowa,"Adair County, Guthrie County",75990,Stuart city,Stuart
+19,Iowa,Jasper County,76035,Sully city,Sully
+19,Iowa,"Bremer County, Fayette County",76260,Sumner city,Sumner
+19,Iowa,Dickinson County,76440,Superior city,Superior
+19,Iowa,O'Brien County,76485,Sutherland city,Sutherland
+19,Iowa,Cerro Gordo County,76620,Swaledale city,Swaledale
+19,Iowa,Marion County,76665,Swan city,Swan
+19,Iowa,Kossuth County,76755,Swea City city,Swea City
+19,Iowa,Johnson County,76890,Swisher city,Swisher
+19,Iowa,"Fremont County, Mills County",76935,Tabor city,Tabor
+19,Iowa,Tama County,77115,Tama city,Tama
+19,Iowa,Carroll County,77340,Templeton city,Templeton
+19,Iowa,Shelby County,77430,Tennant city,Tennant
+19,Iowa,Dickinson County,77520,Terril city,Terril
+19,Iowa,Union County,77565,Thayer city,Thayer
+19,Iowa,Winnebago County,77745,Thompson city,Thompson
+19,Iowa,Humboldt County,77790,Thor city,Thor
+19,Iowa,Keokuk County,77835,Thornburg city,Thornburg
+19,Iowa,Cerro Gordo County,77880,Thornton city,Thornton
+19,Iowa,Fremont County,77970,Thurman city,Thurman
+19,Iowa,Johnson County,78060,Tiffin city,Tiffin
+19,Iowa,Ringgold County,78195,Tingley city,Tingley
+19,Iowa,Cedar County,78285,Tipton city,Tipton
+19,Iowa,Kossuth County,78330,Titonka city,Titonka
+19,Iowa,Tama County,78510,Toledo city,Toledo
+19,Iowa,Clinton County,78600,Toronto city,Toronto
+19,Iowa,Tama County,78735,Traer city,Traer
+19,Iowa,Pottawattamie County,78825,Treynor city,Treynor
+19,Iowa,Bremer County,78915,Tripoli city,Tripoli
+19,Iowa,Buena Vista County,79095,Truesdale city,Truesdale
+19,Iowa,Madison County,79140,Truro city,Truro
+19,Iowa,Monona County,79185,Turin city,Turin
+19,Iowa,Appanoose County,79410,Udell city,Udell
+19,Iowa,Pottawattamie County,79500,Underwood city,Underwood
+19,Iowa,Henry County,54795,Mount Union city,Union
+19,Iowa,Appanoose County,79680,Unionville city,Unionville
+19,Iowa,Johnson County,79770,University Heights city,University Heights
+19,Iowa,Mahaska County,79815,University Park city,University Park
+19,Iowa,Benton County,79905,Urbana city,Urbana
+19,Iowa,"Dallas County, Polk County",79950,Urbandale city,Urbandale
+19,Iowa,Monona County,79995,Ute city,Ute
+19,Iowa,Crawford County,80130,Vail city,Vail
+19,Iowa,Jasper County,80175,Valeria city,Valeria
+19,Iowa,Benton County,80400,Van Horne city,Van Horne
+19,Iowa,Dallas County,80445,Van Meter city,Van Meter
+19,Iowa,Decatur County,80490,Van Wert city,Van Wert
+19,Iowa,Pocahontas County,80535,Varina city,Varina
+19,Iowa,Cerro Gordo County,80580,Ventura city,Ventura
+19,Iowa,"Iowa County, Poweshiek County",80805,Victor city,Victor
+19,Iowa,Montgomery County,80985,Villisca city,Villisca
+19,Iowa,Webster County,81075,Vincent city,Vincent
+19,Iowa,Tama County,81120,Vining city,Vining
+19,Iowa,Benton County,81210,Vinton city,Vinton
+19,Iowa,Clayton County,81345,Volga city,Volga
+19,Iowa,Fayette County,81570,Wadena city,Wadena
+19,Iowa,Dickinson County,81615,Wahpeton city,Wahpeton
+19,Iowa,"Muscatine County, Scott County",81705,Walcott city,Walcott
+19,Iowa,"Benton County, Linn County",81840,Walford city,Walford
+19,Iowa,Linn County,81885,Walker city,Walker
+19,Iowa,Sac County,82020,Wall Lake city,Wall Lake
+19,Iowa,Emmet County,81975,Wallingford city,Wallingford
+19,Iowa,Pottawattamie County,82065,Walnut city,Walnut
+19,Iowa,Louisa County,82200,Wapello city,Wapello
+19,Iowa,Chickasaw County,57495,North Washington city,Washington
+19,Iowa,Cherokee County,82380,Washta city,Washta
+19,Iowa,Black Hawk County,82425,Waterloo city,Waterloo
+19,Iowa,Allamakee County,82470,Waterville city,Waterville
+19,Iowa,Fayette County,82650,Waucoma city,Waucoma
+19,Iowa,Dallas County,82695,Waukee city,Waukee
+19,Iowa,Allamakee County,82740,Waukon city,Waukon
+19,Iowa,Bremer County,82875,Waverly city,Waverly
+19,Iowa,Henry County,82965,Wayland city,Wayland
+19,Iowa,Clay County,83010,Webb city,Webb
+19,Iowa,Keokuk County,83055,Webster city,Webster
+19,Iowa,Hamilton County,83145,Webster City city,Webster City
+19,Iowa,Decatur County,83190,Weldon city,Weldon
+19,Iowa,Washington County,83280,Wellman city,Wellman
+19,Iowa,Grundy County,83325,Wellsburg city,Wellsburg
+19,Iowa,Clinton County,83370,Welton city,Welton
+19,Iowa,Kossuth County,83415,Wesley city,Wesley
+19,Iowa,"Kossuth County, Palo Alto County",83550,West Bend city,West Bend
+19,Iowa,"Cedar County, Johnson County",83595,West Branch city,West Branch
+19,Iowa,Des Moines County,83685,West Burlington city,West Burlington
+19,Iowa,Washington County,83775,West Chester city,West Chester
+19,Iowa,"Dallas County, Polk County, Warren County",83910,West Des Moines city,West Des Moines
+19,Iowa,Muscatine County,84315,West Liberty city,West Liberty
+19,Iowa,Dickinson County,84450,West Okoboji city,West Okoboji
+19,Iowa,Lee County,84585,West Point city,West Point
+19,Iowa,Fayette County,84765,West Union city,West Union
+19,Iowa,Plymouth County,84090,Westfield city,Westfield
+19,Iowa,Fayette County,84180,Westgate city,Westgate
+19,Iowa,Shelby County,84540,Westphalia city,Westphalia
+19,Iowa,Crawford County,84630,Westside city,Westside
+19,Iowa,Henry County,84835,Westwood city,Westwood
+19,Iowa,Keokuk County,84900,What Cheer city,What Cheer
+19,Iowa,Clinton County,84945,Wheatland city,Wheatland
+19,Iowa,Monona County,85215,Whiting city,Whiting
+19,Iowa,Kossuth County,85260,Whittemore city,Whittemore
+19,Iowa,Hardin County,85305,Whitten city,Whitten
+19,Iowa,Carroll County,85710,Willey city,Willey
+19,Iowa,Hamilton County,85800,Williams city,Williams
+19,Iowa,Iowa County,85845,Williamsburg city,Williamsburg
+19,Iowa,Lucas County,85935,Williamson city,Williamson
+19,Iowa,"Cedar County, Muscatine County",86070,Wilton city,Wilton
+19,Iowa,Polk County,86250,Windsor Heights city,Windsor Heights
+19,Iowa,Henry County,86385,Winfield city,Winfield
+19,Iowa,Madison County,86520,Winterset city,Winterset
+19,Iowa,Buchanan County,86565,Winthrop city,Winthrop
+19,Iowa,Cass County,86610,Wiota city,Wiota
+19,Iowa,Hancock County,86700,Woden city,Woden
+19,Iowa,Harrison County,86835,Woodbine city,Woodbine
+19,Iowa,Clarke County,86880,Woodburn city,Woodburn
+19,Iowa,Dallas County,86970,Woodward city,Woodward
+19,Iowa,Wright County,87015,Woolstock city,Woolstock
+19,Iowa,Dubuque County,87060,Worthington city,Worthington
+19,Iowa,Jones County,87240,Wyoming city,Wyoming
+19,Iowa,Guthrie County,87285,Yale city,Yale
+19,Iowa,Calhoun County,87375,Yetter city,Yetter
+19,Iowa,Page County,87420,Yorktown city,Yorktown
+19,Iowa,Story County,87555,Zearing city,Zearing
+19,Iowa,"Dubuque County, Jackson County",87690,Zwingle city,Zwingle
