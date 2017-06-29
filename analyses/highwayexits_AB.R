@@ -5,12 +5,13 @@
 library(stringr)
 library(geosphere)
 library(matrixStats)
+library(gmapsdistance)
 library(ggmap)
 
 ### DO FOR BOTH IOWA AND ARKANSAS
 
 # Import highway exit data
-setwd("~/Git/merging_data/highways")
+setwd("./highways")
 raw <- readLines("iowa_highwayexits.txt")
 
 # Create table of lat/lon coordinates of highway exits
@@ -39,13 +40,13 @@ write.csv(exits,"iowaexits_coordinates.csv", row.names=F)
 
 
 # Need to reorder to lon, lat format
-setwd("~/Git/merging_data/highways")
+setwd("./highways")
 iowa_exits <- read.csv("iowaexits_coordinates.csv", header=T)
 iowa_exits <- iowa_exits[,c(2,1)]
 ark_exits <- read.csv("arkansasexits_coordinates.csv", header=T)
 ark_exits <- ark_exits[,c(2,1)]
 
-setwd("~/Git/merging_data/google_reviews/data/locations/")
+setwd("../google_reviews/data/locations/")
 all_locations <- read.csv("all_locations.csv")
 places <- all_locations[,c(2,1)] # reordering to lon,lat format
 row.names(places) <- all_locations$location
@@ -57,6 +58,13 @@ all_locations$mindist <- rowMins(dist_matrix, na.rm=T) # store the minimum dista
 summary(all_locations$mindist) # check to see if reasonable
 
 # Calculate the minimum distance (as the car drives) between places and exits
+set.api.key("AIzaSyCJY8-BuTVQpUKTgNiybB6UdHB6XqWBZiA")
+google_coords <- as.data.frame(NULL) ### FIX CREATES ISSUES
+google_coords$places <- paste(places[,2], places[,1], collapse ='+')
+google_coords$exits <- paste(iowa_exits[,2], iowa_exits[,1], collapse ='+')
+drive_matrix <- gmapsdistance(google_coords$places, google_coords$exits,
+  combinations="all", mode="driving", shape="long")
+
 diag(driv_matrix) <- NA # remove diagonals
 all_locations$mindrive <- rowMins(drive_matrix, na.rm=T)
 
