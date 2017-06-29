@@ -63,12 +63,12 @@ summary(places$mindist) # check to see if reasonable
 
 # Calculate the minimum distance (as the car drives) between places and exits
 places <- places %>% mutate(latlon=paste0(lat,",",lon))
-iowa_exits <- iowa_exits %>% mutate(latlon=paste0(latitude,",",longitude))
-drive_matrix <- gmapsdistance(places$latlon, iowa_exits$latlon,
-      combinations="all", key="AIzaSyDK2fihNCbG_7ziW3TMjCHD9NZL-lW7dXk",
-      mode="driving", shape="long")
-diag(driv_matrix) <- NA # remove diagonals
-all_locations$mindrive <- rowMins(drive_matrix, na.rm=T)
+# iowa_exits <- iowa_exits %>% mutate(latlon=paste0(latitude,",",longitude))
+# drive_matrix <- gmapsdistance(places$latlon, iowa_exits$latlon,
+#       combinations="all", key="AIzaSyDK2fihNCbG_7ziW3TMjCHD9NZL-lW7dXk",
+#       mode="driving", shape="long")
+# diag(driv_matrix) <- NA # remove diagonals
+# all_locations$mindrive <- rowMins(drive_matrix, na.rm=T)
 
 # Too many calls to gmaps API, so instead doing driving distance to exit with min crow's distance
 places <- places %>% mutate(exitcoords=paste0(iowa_exits$latitude[minexit],",",iowa_exits$longitude[minexit]))
@@ -81,7 +81,18 @@ places$mindrive[1:300] <- drive_1$Distance[,c("Distance")]/1000
 places$mindrive[301:600] <- drive_2$Distance[,c("Distance")]/1000
 places$mindrive[601:946] <- drive_3$Distance[,c("Distance")]/1000
 
+places$time <- NA
+places$time[1:300] <- drive_1$Time[,c("Time")]/60
+places$time[301:600] <- drive_2$Time[,c("Time")]/60
+places$time[601:946] <- drive_3$Time[,c("Time")]/60
+
 cor(places$mindist, places$mindrive) # 0.93 correlation
+cor(places$mindrive, places$time) # 0.99 correlation
+
+# Write out distances & time
+setwd("~/Git/sicss-culturalvariation/")
+place_distances <- cbind(all_locations, places[,c("mindist","mindrive","time")])
+write_csv(place_distances,"city_highway_distances.csv", col_names=T)
 
 ### Plot cities & exits
 
@@ -94,12 +105,13 @@ bounds <- c(min(iowa_exits$longitude-.05), min(iowa_exits$latitude-.05),
             max(iowa_exits$longitude)+.05, max(iowa_exits$latitude+.05))
 
 # Create map with exits and cities
-setwd("~/Git/merging_data/Presentation")
+setwd("~/Git/sicss-culturalvariation/Presentation")
 map <- get_map(bounds, zoom = 7, maptype = "roadmap", source="google")
-png(filename="Iowa_distance.png", units="in", width=6, height=6, pointsize=16, res=256)
+png(filename="Iowa_time.png", units="in", width=8, height=6, pointsize=16, res=256)
   ggmap(map) +
-    geom_point(aes(x = longitude, y = latitude), data = iowa_exits, alpha = .5, color = "black") +
-    geom_point(aes(x=lon, y=lat, color=mindist), data=places, alpha=.5) +
+    geom_point(aes(x = longitude, y = latitude), data = iowa_exits, size=1, alpha=1, color = "black") +
+    geom_point(aes(x=lon, y=lat, color=time), data=places, size=1.3, alpha=0.8) +
+    scale_colour_continuous(low="orange",high="blue") +
     theme_bw()
 dev.off()
 
