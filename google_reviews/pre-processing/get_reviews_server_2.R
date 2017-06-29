@@ -41,7 +41,7 @@ get_our_stores <- function(place_id, apikey, pause_length){
 }
 
 ### read in all files of place ids
-all_city_files <- list.files("../place_ids/")[100:473]
+all_city_files <- list.files("../place_ids/")[6:99]
 
 ### loop over cities, get reviews for each place id, and write to feather file
 for (i in 1:length(all_city_files)) {
