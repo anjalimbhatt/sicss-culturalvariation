@@ -1,0 +1,417 @@
+---
+title: Descriptive Analyses of Google Review Data
+subtitle: 
+author: Molly Lewis 
+date: "`r Sys.Date()`"
+output: 
+  html_document:
+    number_sections: false
+    theme: cerulean
+    toc_float: true
+    code_folding: hide
+---
+  
+******
+******
+
+```{r setup, include = F}
+rm(list=ls())
+
+# load packages
+library(tidyverse) 
+library(knitr)
+library(rmarkdown)
+library(broom)
+library(langcog)
+library(magrittr)
+library(ggmap)
+library(tidytext)
+library(remoji)
+library(feather)
+library(stringr)
+library(quanteda)
+library(corrr)
+
+opts_chunk$set(echo = T, message = F, warning = F, 
+               error = F, tidy = F,  cache = F, fig.height = 4)
+```  
+
+Read in all reviews and merge in metadata
+```{r}
+all.review.files <- list.files("../data/reviews/")
+
+all.reviews = map(all.review.files, function(x) {
+    read_feather(paste0("../../data/reviews/", x)) %>%
+    mutate(city = unlist(str_split(x, "_"))[1])}) %>%
+  bind_rows() 
+
+all.reviews.clean = all.reviews %>%
+    filter(!is.na(reviews)) %>%
+    filter(reviews != "") %>%
+    select(city, place.id, reviews, author.names) %>%
+    mutate_all(funs(as.factor))
+
+all.place_id.files <- list.files("../data/place_ids/")
+all.place_id.meta = map(all.place_id.files, function(x) {
+    read_feather(paste0("../data/place_ids/", x))}) %>%
+  bind_rows() %>%
+  rename(city = location)
+
+all.place_id.meta.clean = all.place_id.meta %>%
+              select(place.id, city, types, name) %>%
+              mutate_all(funs(as.factor)) %>%
+              distinct(place.id, city, types, name) # some place ids are duplicated across cities
+            
+# merge on place id
+d = left_join(all.reviews.clean, all.place_id.meta.clean) %>%
+      mutate(review_num = 1:nrow(.)) %>%
+      select(review_num, city, place.id, types, city, name, reviews, author.names) 
+```
+
+There are `r nrow(all.reviews.clean)` in total.
+
+## Distribution of number of reviews by city
+What does the distribution of cities look like across cities?
+```{r}
+n.place.per.city = d %>%
+  group_by(city, name) %>%
+  slice(1) %>%
+  group_by(city) %>%
+  summarize(n = n())
+
+ggplot(n.place.per.city, aes(x = n)) +
+  geom_histogram() +
+  theme_bw() +
+  ggtitle("# place with reviews per city")
+
+# ggplot(n.place.per.city, aes(x = "", y = n)) +
+#   geom_boxplot() +
+#   theme_bw() +
+#   ggtitle("# place with reviews per city") +
+#   xlab("")
+
+# cities with at least 5 reviews
+CUTOFF <- 4
+
+big.cities = n.place.per.city %>%
+  filter(n > CUTOFF) 
+```
+
+There are `r nrow(big.cities)` cities with at least `r CUTOFF + 1` reviews. 
+
+### Geographical distribution
+```{r}
+big.cities = left_join(big.cities, 
+                       all.place_id.meta %>% select(city, lat, lon) %>% 
+                         group_by(city) %>% slice(1))
+
+iowa_bounding_box = c(-96.6397171020508, 40.3755989074707, # southwest coordinates
+                      -90.1400604248047, 43.5011367797852) # northeast coordinates
+
+map <- get_stamenmap(iowa_bounding_box, zoom = 5, maptype = "toner-lite")
+
+ggmap(map) +
+  geom_point(aes(x = lon, y = lat, size = log(n)), 
+             data = big.cities, alpha = .5, color = "red") +
+  theme_bw()
+```
+
+Now we're only going to include these cities.
+```{r}
+d.big = d %>%
+  filter(city %in% unique(big.cities$city))
+```
+
+## Linguistic Measures by City
+We calculate these measure on each review and then get city mean. 
+
+### Character measures (prop neg, q, cap, emoji)
+```{r}
+# reg expression for emojis
+emj <- paste(unlist(trimws(emoji(list_emoji(), TRUE))), collapse = "|")
+
+d.big = d.big %>%
+  mutate(reviews.clean = trimws(str_replace_all(reviews," "," ")),# remove extra spaces
+         reviews.clean = str_replace_all(reviews.clean, "http[[:alnum:]]*", ""), # remove urls  
+         reviews.clean = str_replace_all(reviews.clean, "\n|\"", ""),
+         reviews.clean = str_replace_all(reviews.clean, emj, "EMOJI"),
+         reviews.clean = str_replace_all(reviews.clean, ":\\)|:\\(|:-\\)|:-\\(", "EMOJI")) # remove emjois
+
+d.big = d.big %>%
+  rowwise() %>%
+  mutate(review.length = str_length(reviews.clean),
+         prop.cap = length(unlist(regmatches(reviews.clean, gregexpr("[A-Z]", reviews.clean, perl=TRUE))))/review.length,
+         prop.exclam =  sum(gregexpr("[!]", reviews.clean)[[1]] > 0)/review.length,
+         prop.emoji = sum(gregexpr("EMOJI", reviews.clean)[[1]] > 0)/review.length)
+```
+
+
+### Distribution of linguistic measures by city
+```{r}
+long.d = d.big %>%
+  select(city, review.length, prop.cap, prop.exclam, prop.emoji) %>%
+  gather(measure, value, 2:5)
+
+city.d = long.d %>%
+  group_by(city, measure) %>%
+  summarize(mean = mean(value, na.rm = T))
+
+ggplot(city.d %>% filter(measure != "review.length"), aes(x = log(mean))) +
+         facet_wrap(~measure, scales = "free") +
+  geom_histogram(aes(fill = measure)) +
+  theme_bw() +
+  theme(legend.position = "none") 
+
+ggplot(city.d %>% filter(measure == "review.length"), aes(x = log(mean))) +
+         facet_wrap(~measure, scales = "free") +
+  geom_histogram(aes(fill = measure)) +
+  theme_bw() +
+  theme(legend.position = "none") 
+```
+
+### Geographical distribution
+```{r}
+city.d.coord = inner_join(ungroup(city.d), 
+            all.place_id.meta %>% select(city, lat, lon) %>% group_by(city) %>% slice(1))
+
+ggmap(map) +
+  geom_point(aes(x = lon, y = lat, alpha = log(mean)), 
+             data = filter(city.d.coord, measure == "review.length"), 
+             color = "red") +
+  ggtitle("log length") +
+  theme_bw()
+```
+
+```{r}
+ggmap(map) +
+  geom_point(aes(x = lon, y = lat, alpha = log(mean)), 
+             data = filter(city.d.coord, measure == "prop.cap"), 
+             color = "red") +
+  ggtitle("log prop capitalization") +
+  theme_bw()
+```
+
+```{r}
+ggmap(map) +
+  geom_point(aes(x = lon, y = lat, alpha = log(mean)), 
+             data = filter(city.d.coord,
+                           measure == "prop.exclam" & mean != 0) , 
+             color = "red") +
+  ggtitle("log prop exclam") +
+  theme_bw()
+```
+
+```{r}
+ggmap(map) +
+  geom_point(aes(x = lon, y = lat, alpha = log(mean)), 
+             data = filter(city.d.coord,
+                           measure == "prop.emoji" & mean != 0) , 
+             color = "red") +
+  ggtitle("log prop emoji") +
+  theme_bw()
+```
+
+## Corpus-wide measures (across city)
+### Sentiment
+
+Create corpus for each city
+
+```{r}
+d.tokenized <- d.big %>%
+  ungroup() %>%
+  mutate(reviews = as.character(reviews)) %>%
+  unnest_tokens(word, reviews) 
+# remove stop words
+data(stop_words)
+
+d.tokenized.clean <- d.tokenized %>%
+  anti_join(stop_words)
+
+counts = d.tokenized.clean %>%
+  count(word, sort = TRUE) %>%
+  arrange(n)
+  
+# remove infrequent words
+infrequent.words = d.tokenized.clean %>%
+  count(word, sort = TRUE) %>%
+  filter(n < 10) 
+
+d.tokenized.clean = d.tokenized.clean %>%
+  anti_join(infrequent.words)
+
+affin = d.tokenized.clean %>% 
+  inner_join(get_sentiments("afinn")) %>%
+  group_by(city) %>%
+  summarize(mean = mean(score, na.rm = T)) %>%
+  arrange(mean)
+
+# num words per 
+numwords = d.tokenized.clean %>%
+  group_by(city) %>%
+  summarize(n = n()) %>%
+  arrange(n)
+```
+
+```{r, eval = F}
+bingnegative <- get_sentiments("bing") %>% 
+  filter(sentiment == "negative")
+
+wordcounts <- d.tokenized %>%
+  group_by(review_num) %>%
+  summarize(num_words = n()) %>%
+  select(city, review_num, word)
+
+prop.negative = d.tokenized %>%
+  semi_join(bingnegative) %>%
+  group_by(review_num) %>%
+  summarize(negativewords = n()) %>%
+  left_join(wordcounts, by = "review_num") %>%
+  mutate(prop.neg = negativewords/num_words) %>%
+  ungroup() %>%
+  select(review_num, prop.neg)
+```
+
+
+```{r}
+affin = d.tokenized.clean %>% 
+  inner_join(get_sentiments("afinn")) %>%
+  group_by(city) %>%
+  summarize(affin.mean = mean(score, na.rm = T)) %>%
+  arrange(affin.mean)
+
+affin.cord = inner_join(ungroup(affin), 
+            all.place_id.meta %>% select(city, lat, lon) %>% group_by(city) %>% slice(1))
+
+ggplot(affin.cord, aes(x = mean)) +
+  geom_histogram() +
+  theme_bw() +
+  ggtitle("Sentiment")
+```
+
+```{r}
+ggmap(map) +
+  geom_point(aes(x = lon, y = lat, alpha = mean), 
+             data = affin.cord, 
+             color = "red") +
+  ggtitle("Sentiment") +
+  theme_bw()
+```
+
+### Lexical diversity
+```{r}
+city.corpus = d.tokenized.clean %>%
+  group_by(city) %>%
+  summarise(text=paste(word, collapse=" "))
+
+docs =  corpus(city.corpus, 
+               doc_id = "city", text_field = "text")
+
+dfm_docs = dfm(docs, groups = "city")
+unigram.diversity = textstat_lexdiv(dfm_docs) %>%
+                    rownames_to_column() %>%
+                    rename(city = rowname)
+```
+
+```{r}
+unigram.diversity =   left_join(unigram.diversity, 
+                                all.place_id.meta %>% select(city, lat, lon) %>% group_by(city) %>% slice(1))
+
+ggmap(map) +
+  geom_point(aes(x = lon, y = lat, alpha = TTR), 
+             data = unigram.diversity, 
+             color = "red") +
+  ggtitle("TTR") +
+  theme_bw()
+```
+
+### N-grams
+```{r}
+bigrams <- d.big %>%
+  select(city, review_num, reviews) %>%
+  group_by(city, reviews) %>%
+  unnest_tokens(bigram, reviews, token = "ngrams", n = 2)
+
+unigrams <- d.big %>%
+  select(city, review_num, reviews) %>%
+  ungroup() %>%
+  mutate(reviews = as.character(reviews))%>%
+  unnest_tokens(unigram, reviews)
+
+num_unigrams = unigrams %>%
+      ungroup() %>%
+      group_by(city, unigram) %>%
+      count(unigram, sort = TRUE) %>%
+      group_by(city) %>%
+      summarize(n.unigrams = n())
+
+bigram.diversity = bigrams %>%
+  group_by(city) %>%
+  summarize(n.bigrams = n()) %>%
+  left_join(num_unigrams, by = "city") %>%
+  mutate(normalized.bigrams = n.bigrams/n.unigrams)
+
+```
+
+### All variables
+```{r}
+all.lang = city.d %>%
+  spread(measure, mean) %>%
+  left_join(unigram.diversity, by = "city") %>%
+  left_join(bigram.diversity, by = "city") %>%  
+  left_join(affin, by = "city") %>%
+  mutate(log.review.length = log(review.length), 
+         log.prop.cap = log(prop.cap), 
+         log.prop.exclam = log(prop.exclam), 
+         log.prop.emoji = log(prop.emoji)) %>%
+  select(-review.length, -prop.cap, -prop.exclam,
+         -prop.emoji, -U, -lgV0, -lgeV0)
+
+is.na(all.lang)<-sapply(all.lang, is.infinite)
+```
+
+Pairwise correlation
+```{r}
+correlate(all.lang[,-1]) %>%
+  focus(TTR:log.prop.emoji, mirror = TRUE) %>%
+  shave(upper = TRUE) %>%
+  rplot()
+```
+
+### Outcomes measures
+
+Are linguistic measure correlated with outcomes measures
+```{r}
+dist = read_csv("../data/city_highway_distances.csv") %>%
+  rename(city = location) %>%
+  mutate(log.mindrive = log(mindrive),
+         log.time = log(time)) %>%
+  select(-mindrive, -mindist, -time)
+
+all = all.lang %>%
+  left_join(dist) %>%
+  select(-lat, -lon) 
+
+correlate(all[,-1]) %>%
+  focus(TTR:log.time, mirror = TRUE) %>%
+  shave(upper = TRUE) %>%
+  rplot()
+```
+
+```{r}
+ggplot(all, aes(x = log.mindrive, y = TTR)) +
+  geom_point() +
+  geom_smooth(method = "lm") +
+  theme_bw()
+
+ggplot(all, aes(x = log.time, y = TTR)) +
+  geom_point() +
+  geom_smooth(method = "lm") +
+  theme_bw()
+
+ggplot(all, aes(x = log.time, y = affin.mean)) +
+  geom_point() +
+  geom_smooth(method = "lm") +
+  theme_bw()
+```
+
+# TO DO : sample rows to get TTR; do subway
