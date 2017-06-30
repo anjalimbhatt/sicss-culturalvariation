@@ -36,6 +36,12 @@ opts_chunk$set(echo = T, message = F, warning = F,
                error = F, tidy = F,  cache = F, fig.height = 4)
 ```  
 
+```{r}
+# params
+CUTOFF <- 9 # numer of reviews cutoff
+#STORE_TYPE <- "Casey's General Store"
+STORE_TYPE <- "SUBWAY®Restaurants"
+```
 Read in all reviews and merge in metadata
 ```{r}
 all.review.files <- list.files("../data/reviews/")
@@ -65,10 +71,22 @@ all.place_id.meta.clean = all.place_id.meta %>%
 # merge on place id
 d = left_join(all.reviews.clean, all.place_id.meta.clean) %>%
       mutate(review_num = 1:nrow(.)) %>%
-      select(review_num, city, place.id, types, city, name, reviews, author.names) 
+      select(review_num, city, place.id, types, city, name, reviews, author.names) %>%
+      filter(name == STORE_TYPE)
 ```
 
 There are `r nrow(all.reviews.clean)` in total.
+
+Distribution of store types
+```{r, eval = F}
+all.place_id.meta.clean %>%
+  group_by(name, city) %>%
+  slice(1)%>%
+  group_by(name)%>%
+  summarize(n = n()) %>%
+  arrange(-n)
+
+```
 
 ## Distribution of number of reviews by city
 What does the distribution of cities look like across cities?
@@ -90,11 +108,8 @@ ggplot(n.place.per.city, aes(x = n)) +
 #   ggtitle("# place with reviews per city") +
 #   xlab("")
 
-# cities with at least 5 reviews
-CUTOFF <- 4
-
-big.cities = n.place.per.city %>%
-  filter(n > CUTOFF) 
+big.cities = n.place.per.city 
+#  filter(n > CUTOFF) 
 ```
 
 There are `r nrow(big.cities)` cities with at least `r CUTOFF + 1` reviews. 
@@ -183,8 +198,13 @@ ggmap(map) +
 ```
 
 ```{r}
+
+city.d.coord = city.d.coord %>%
+  mutate(log.prop.cap = ifelse(measure == "prop.cap",log(mean), mean ))
+is.na(city.d.coord)<-sapply(city.d.coord, is.infinite)
+
 ggmap(map) +
-  geom_point(aes(x = lon, y = lat, alpha = log(mean)), 
+  geom_point(aes(x = lon, y = lat, alpha = log.prop.cap), 
              data = filter(city.d.coord, measure == "prop.cap"), 
              color = "red") +
   ggtitle("log prop capitalization") +
@@ -280,9 +300,10 @@ affin = d.tokenized.clean %>%
   arrange(affin.mean)
 
 affin.cord = inner_join(ungroup(affin), 
-            all.place_id.meta %>% select(city, lat, lon) %>% group_by(city) %>% slice(1))
+            all.place_id.meta %>% select(city, lat, lon) %>%
+              group_by(city) %>% slice(1))
 
-ggplot(affin.cord, aes(x = mean)) +
+ggplot(affin.cord, aes(x = affin.mean)) +
   geom_histogram() +
   theme_bw() +
   ggtitle("Sentiment")
@@ -290,7 +311,7 @@ ggplot(affin.cord, aes(x = mean)) +
 
 ```{r}
 ggmap(map) +
-  geom_point(aes(x = lon, y = lat, alpha = mean), 
+  geom_point(aes(x = lon, y = lat, alpha = affin.mean), 
              data = affin.cord, 
              color = "red") +
   ggtitle("Sentiment") +
@@ -307,9 +328,22 @@ docs =  corpus(city.corpus,
                doc_id = "city", text_field = "text")
 
 dfm_docs = dfm(docs, groups = "city")
-unigram.diversity = textstat_lexdiv(dfm_docs) %>%
+unigram.diversity = textstat_lexdiv(dfm_docs, measure = "TTR") %>%
                     rownames_to_column() %>%
                     rename(city = rowname)
+```
+
+Sampling
+```{r}
+1:1000
+
+num.words.per.city = d.tokenized.clean %>%
+  group_by(city) %>%
+  summarize(n = n()) %>%
+  arrange(-n)
+
+## mapy do walmart?
+
 ```
 
 ```{r}
@@ -369,13 +403,6 @@ all.lang = city.d %>%
 is.na(all.lang)<-sapply(all.lang, is.infinite)
 ```
 
-Pairwise correlation
-```{r}
-correlate(all.lang[,-1]) %>%
-  focus(TTR:log.prop.emoji, mirror = TRUE) %>%
-  shave(upper = TRUE) %>%
-  rplot()
-```
 
 ### Outcomes measures
 
@@ -394,16 +421,29 @@ all = all.lang %>%
 correlate(all[,-1]) %>%
   focus(TTR:log.time, mirror = TRUE) %>%
   shave(upper = TRUE) %>%
-  rplot()
+  rplot() +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1))
 ```
 
 ```{r}
-ggplot(all, aes(x = log.mindrive, y = TTR)) +
+cor.test(all$log.time, all$TTR)
+```
+
+```{r}
+
+
+ggplot(all, aes(x = log.time, y = TTR)) +
   geom_point() +
   geom_smooth(method = "lm") +
   theme_bw()
 
-ggplot(all, aes(x = log.time, y = TTR)) +
+ggplot(all, aes(x = log.time, y = log.review.length)) +
+  geom_point() +
+  geom_smooth(method = "lm") +
+  theme_bw()
+
+
+ggplot(all, aes(x = TTR, y = log.review.length)) +
   geom_point() +
   geom_smooth(method = "lm") +
   theme_bw()
@@ -412,6 +452,14 @@ ggplot(all, aes(x = log.time, y = affin.mean)) +
   geom_point() +
   geom_smooth(method = "lm") +
   theme_bw()
+
+ggplot(all, aes(x = log.time, y = log.prop.emoji)) +
+  geom_point() +
+  geom_smooth(method = "lm") +
+  theme_bw()
 ```
 
-# TO DO : sample rows to get TTR; do subway
+Heteroscedasticity
+##### TO DO : sample rows to get TTR; do subway# MTLD
+
+http://www.vli-journal.org/issues/01.1/issue01.1.10.pdf
