@@ -10,9 +10,6 @@ zipcodes <- read.csv("zip_codes_states.csv", header=T)
 
 iowa_cities <- read.csv("iowa_cities_wiki.csv", header=F)
 
-apikey <- "AIzaSyCJY8-BuTVQpUKTgNiybB6UdHB6XqWBZiA"
-newapikey <- "AIzaSyBooOJs6oAVIWmHlPaN2VKyRjqaWceX79g"
-
 # get highway exit coordinates in csv
 # create function that calculates shortest distance from place to exit
 # look up how to get census information for addresses/coordinates

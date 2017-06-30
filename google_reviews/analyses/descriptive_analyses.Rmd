@@ -41,7 +41,7 @@ Read in all reviews and merge in metadata
 all.review.files <- list.files("../data/reviews/")
 
 all.reviews = map(all.review.files, function(x) {
-    read_feather(paste0("../../data/reviews/", x)) %>%
+    read_feather(paste0("../data/reviews/", x)) %>%
     mutate(city = unlist(str_split(x, "_"))[1])}) %>%
   bind_rows() 
 
