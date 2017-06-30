@@ -40,7 +40,7 @@ opts_chunk$set(echo = T, message = F, warning = F,
 # params
 CUTOFF <- 9 # numer of reviews cutoff
 #STORE_TYPE <- "Casey's General Store"
-STORE_TYPE <- "SUBWAY®Restaurants"
+#STORE_TYPE <- "SUBWAY®Restaurants"
 ```
 Read in all reviews and merge in metadata
 ```{r}
@@ -71,8 +71,8 @@ all.place_id.meta.clean = all.place_id.meta %>%
 # merge on place id
 d = left_join(all.reviews.clean, all.place_id.meta.clean) %>%
       mutate(review_num = 1:nrow(.)) %>%
-      select(review_num, city, place.id, types, city, name, reviews, author.names) %>%
-      filter(name == STORE_TYPE)
+      select(review_num, city, place.id, types, city, name, reviews, author.names) #%>%
+#      filter(name == STORE_TYPE)
 ```
 
 There are `r nrow(all.reviews.clean)` in total.

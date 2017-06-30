@@ -93,6 +93,7 @@ cor(places$mindrive, places$time) # 0.99 correlation
 setwd("~/Git/sicss-culturalvariation/")
 place_distances <- cbind(all_locations, places[,c("mindist","mindrive","time")])
 write_csv(place_distances,"city_highway_distances.csv", col_names=T)
+places <- read.csv("city_highway_distances.csv", header=T)
 
 ### Plot cities & exits
 
@@ -107,17 +108,55 @@ bounds <- c(min(iowa_exits$longitude-.05), min(iowa_exits$latitude-.05),
 # Create map with exits and cities
 setwd("~/Git/sicss-culturalvariation/Presentation")
 map <- get_map(bounds, zoom = 7, maptype = "roadmap", source="google")
-png(filename="Iowa_sample.png", units="in", width=8, height=6, pointsize=16, res=256)
+png(filename="Iowa_time.png", units="in", width=8, height=6, pointsize=16, res=256)
   ggmap(map) +
     geom_point(aes(x = longitude, y = latitude), data = iowa_exits, size=1, alpha=1, color = "black") +
-    geom_point(aes(x=lon, y=lat), data=places, size=1.3, alpha=0.8, color="red") +
-#    geom_point(aes(x=lon, y=lat, color=time), data=places, size=1.3, alpha=0.8) +
-#    scale_colour_continuous(low="orange",high="blue") +
-    theme_bw() + theme(legend.position="none", axis.line=element_blank(),axis.text.x=element_blank(),
+#    geom_point(aes(x=lon, y=lat), data=places, size=1.3, alpha=0.8, color="red") +
+    geom_point(aes(x=lon, y=lat, color=time), data=places, size=1.3, alpha=0.8) +
+    scale_colour_continuous(low="orange",high="blue") +
+    theme_bw() + theme(#legend.position="none",
+                       axis.line=element_blank(),axis.text.x=element_blank(),
                        axis.text.y=element_blank(),axis.ticks=element_blank(),
                        axis.title.x=element_blank(),
                        axis.title.y=element_blank())
 dev.off()
 
-# Color cities by distance from exit
+# Demographic maps
+setwd("~/Git/sicss-culturalvariation/google_reviews/data")
+nreviews <- read.csv("n_reviews.csv", header=T)
 
+png(filename="Iowa_reviews.png", units="in", width=8, height=6, pointsize=16, res=256)
+ggmap(map) +
+  geom_point(aes(x = longitude, y = latitude), data = iowa_exits, size=1, alpha=1, color = "black") +
+  geom_point(aes(x=lon, y=lat, size=n), data=nreviews, alpha=0.5, color="red") +
+#  geom_point(aes(x=lon, y=lat, color=white), data=places, size=4, alpha=1) +
+#  scale_colour_continuous(low="black",high="ivory") +
+  theme_bw() + theme(#legend.position="none",
+    axis.line=element_blank(),axis.text.x=element_blank(),
+    axis.text.y=element_blank(),axis.ticks=element_blank(),
+    axis.title.x=element_blank(),
+    axis.title.y=element_blank())
+dev.off()
+
+# Color cities by distance from exit
+census_data <- read.csv("census_data.csv", header=T)
+places$pop <- NULL
+places$white <- NULL
+for (i in 1:nrow(places)){
+  places$pop[i] <- census_data$pop[which(as.character(census_data$city)==as.character(places$location[i]))]
+  places$white[i] <- census_data$popwhite[which(as.character(census_data$city)==as.character(places$location[i]))] / census_data$pop[which(as.character(census_data$city)==as.character(places$location[i]))]
+}
+
+
+png(filename="Iowa_white.png", units="in", width=8, height=6, pointsize=16, res=256)
+ggmap(map) +
+#  geom_point(aes(x=lon, y=lat, size=pop), data=places, alpha=0.5, color="blue") +
+  geom_point(aes(x=lon, y=lat, color=white), data=places, size=4, alpha=1) +
+  geom_point(aes(x = longitude, y = latitude), data = iowa_exits, size=1, alpha=1, color = "red") +
+  scale_colour_continuous(low="black",high="ivory") +
+  theme_bw() + theme(#legend.position="none",
+    axis.line=element_blank(),axis.text.x=element_blank(),
+    axis.text.y=element_blank(),axis.ticks=element_blank(),
+    axis.title.x=element_blank(),
+    axis.title.y=element_blank())
+dev.off()
