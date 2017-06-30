@@ -107,12 +107,16 @@ bounds <- c(min(iowa_exits$longitude-.05), min(iowa_exits$latitude-.05),
 # Create map with exits and cities
 setwd("~/Git/sicss-culturalvariation/Presentation")
 map <- get_map(bounds, zoom = 7, maptype = "roadmap", source="google")
-png(filename="Iowa_time.png", units="in", width=8, height=6, pointsize=16, res=256)
+png(filename="Iowa_sample.png", units="in", width=8, height=6, pointsize=16, res=256)
   ggmap(map) +
     geom_point(aes(x = longitude, y = latitude), data = iowa_exits, size=1, alpha=1, color = "black") +
-    geom_point(aes(x=lon, y=lat, color=time), data=places, size=1.3, alpha=0.8) +
-    scale_colour_continuous(low="orange",high="blue") +
-    theme_bw()
+    geom_point(aes(x=lon, y=lat), data=places, size=1.3, alpha=0.8, color="red") +
+#    geom_point(aes(x=lon, y=lat, color=time), data=places, size=1.3, alpha=0.8) +
+#    scale_colour_continuous(low="orange",high="blue") +
+    theme_bw() + theme(legend.position="none", axis.line=element_blank(),axis.text.x=element_blank(),
+                       axis.text.y=element_blank(),axis.ticks=element_blank(),
+                       axis.title.x=element_blank(),
+                       axis.title.y=element_blank())
 dev.off()
 
 # Color cities by distance from exit
